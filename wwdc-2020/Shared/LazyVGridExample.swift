@@ -35,7 +35,7 @@ struct LazyVGridExample: View {
     
     var body: some View {
         ScrollView {
-            WWDCLinkView(title: "Stacks, Grids, and Outlines in SwiftUI", url: "https://developer.apple.com/wwdc20/10031")
+            WWDCLink(title: "Stacks, Grids, and Outlines in SwiftUI", url: "https://developer.apple.com/wwdc20/10031")
                 .padding(.vertical, 20)
             
             SizingControlsView(minimumItemSize: $minimumItemSize, spacing: $spacing)

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct WWDCLinkView: View {
+struct WWDCLink: View {
     let title: String
     let url: String
     
@@ -24,6 +24,6 @@ struct WWDCLinkView: View {
 
 struct WWDCLinkView_Previews: PreviewProvider {
     static var previews: some View {
-        WWDCLinkView(title: "Apple Developer", url: "https://developer.apple.com")
+        WWDCLink(title: "Apple Developer", url: "https://developer.apple.com")
     }
 }
