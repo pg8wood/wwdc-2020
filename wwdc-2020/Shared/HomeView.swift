@@ -12,16 +12,31 @@ struct HomeView: View {
     
     var body: some View {
         NavigationView {
-            List(store.exampleModels) { exampleModel in
-                Text(exampleModel.title)
+            List {
+                ForEach(store.exampleModels) { exampleModel in
+                    Text(exampleModel.title)
+                }
+                
+                
+                NavigationLink(destination: LazyVGridExample()) {
+                    Text("Lazy VGrid Example")
+                }
             }
             .navigationTitle("WWDC 2020")
+            
+            Text("This Text view is the view that will show in iPad portrait mode before the user slides to reveal the above list.")
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(store: HomeListStore())
+        Group {
+            HomeView(store: HomeListStore())
+                .previewDevice(PreviewDevice(rawValue: "iPhone X"))
+            
+            HomeView(store: HomeListStore())
+                .previewDevice(PreviewDevice(rawValue: "iPad Pro (12.9-inch) (4th generation)"))
+        }
     }
 }
