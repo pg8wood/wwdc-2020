@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @ObservedObject var store: HomeListStore
+    @EnvironmentObject var userSettings: UserSettings
         
     var body: some View {
         NavigationView {
@@ -26,6 +27,17 @@ struct HomeView: View {
                 } label: {
                     Label("Stacks, Grids, and Outlines", systemImage: "square.grid.3x3.fill")
                         .labelStyle(VerticallyCenteredLabelImageAlignmentStyle()) // TODO: remove when Apple fixes the vertical alignment of the system image
+                }
+                
+                DisclosureGroup {
+                    NavigationLink(destination: SettingsView()
+                                    .environmentObject(userSettings)) {
+                        Text("AppStorage Example")
+                    }
+                    Text("Scene Storage - TODO")
+                } label: {
+                    Label("Persistence", systemImage: "externaldrive")
+                        .labelStyle(VerticallyCenteredLabelImageAlignmentStyle())
                 }
             }
             .navigationTitle("WWDC 2020")

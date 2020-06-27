@@ -12,17 +12,17 @@ struct SettingsView: View {
     @EnvironmentObject var userSettings: UserSettings
     
     var body: some View {
-        NavigationView {
-            VStack(alignment: .leading) {
-                AccentColorPickerView(accentColorString: $userSettings.accentColorString)
-    
-                // The current ColorPicker is not dismissable on the iOS 14.0 beta at the time of writing
-                // ColorPicker("Tint color", selection: $tintColor)
-            }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-            .padding()
-            .navigationTitle("Settings")
+        VStack(alignment: .leading) {
+            WWDCLink(title: "Data Essentials in SwiftUI", url: "https://developer.apple.com/wwdc20/10040")
+            
+            AccentColorPickerView(accentColorString: $userSettings.accentColorString)
+            
+            // The current ColorPicker is not dismissable on the iOS 14.0 beta at the time of writing
+            // ColorPicker("Tint color", selection: $tintColor)
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+        .padding()
+        .navigationTitle("Settings")
         .navigationViewStyle(StackNavigationViewStyle())
     }
 }

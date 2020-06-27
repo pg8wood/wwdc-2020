@@ -14,14 +14,9 @@ struct MainTabView: View {
     var body: some View {
         TabView {
             HomeView(store: store)
-                .tabItem {
-                    Label("Home", systemImage: "house.fill")
-                }
-            
-            SettingsView()
                 .environmentObject(userSettings)
                 .tabItem {
-                    Label("Settings", systemImage: "gear")
+                    Label("Home", systemImage: "house.fill")
                 }
         }
     }
