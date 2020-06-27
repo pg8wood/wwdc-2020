@@ -21,6 +21,12 @@
 		B8CE93E624A666ED0028B27F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8CE93D024A666ED0028B27F /* Assets.xcassets */; };
 		B8CE93F024A6694A0028B27F /* HomeListStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CE93EF24A6694A0028B27F /* HomeListStore.swift */; };
 		B8CE93F124A6694A0028B27F /* HomeListStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CE93EF24A6694A0028B27F /* HomeListStore.swift */; };
+		B8DB3FD024A7C18A00AC9B70 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DB3FCF24A7C18A00AC9B70 /* MainTabView.swift */; };
+		B8DB3FD124A7C18A00AC9B70 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DB3FCF24A7C18A00AC9B70 /* MainTabView.swift */; };
+		B8DB3FD324A7C25200AC9B70 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DB3FD224A7C25200AC9B70 /* SettingsView.swift */; };
+		B8DB3FD424A7C25200AC9B70 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DB3FD224A7C25200AC9B70 /* SettingsView.swift */; };
+		B8DB3FD624A7D1E300AC9B70 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DB3FD524A7D1E300AC9B70 /* UserSettings.swift */; };
+		B8DB3FD724A7D1E300AC9B70 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DB3FD524A7D1E300AC9B70 /* UserSettings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +42,9 @@
 		B8CE93DF24A666ED0028B27F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8CE93E024A666ED0028B27F /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		B8CE93EF24A6694A0028B27F /* HomeListStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListStore.swift; sourceTree = "<group>"; };
+		B8DB3FCF24A7C18A00AC9B70 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		B8DB3FD224A7C25200AC9B70 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		B8DB3FD524A7D1E300AC9B70 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +87,9 @@
 			isa = PBXGroup;
 			children = (
 				B8CE93CE24A666EA0028B27F /* wwdc_2020App.swift */,
+				B8DB3FCF24A7C18A00AC9B70 /* MainTabView.swift */,
+				B8DB3FD224A7C25200AC9B70 /* SettingsView.swift */,
+				B8DB3FD524A7D1E300AC9B70 /* UserSettings.swift */,
 				B8CE93CF24A666EA0028B27F /* HomeView.swift */,
 				B8CE93EF24A6694A0028B27F /* HomeListStore.swift */,
 				B8B4F2F424A6CA9A001AFC0E /* LazyVGridExample.swift */,
@@ -212,10 +224,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8CE93E324A666ED0028B27F /* HomeView.swift in Sources */,
+				B8DB3FD324A7C25200AC9B70 /* SettingsView.swift in Sources */,
 				B8B4F2F524A6CA9A001AFC0E /* LazyVGridExample.swift in Sources */,
+				B8DB3FD024A7C18A00AC9B70 /* MainTabView.swift in Sources */,
 				B8CE93F024A6694A0028B27F /* HomeListStore.swift in Sources */,
 				B8CE93E124A666ED0028B27F /* wwdc_2020App.swift in Sources */,
 				B8B4F2F824A6D435001AFC0E /* WWDCLink.swift in Sources */,
+				B8DB3FD624A7D1E300AC9B70 /* UserSettings.swift in Sources */,
 				B8BCB15A24A6F89000F994BD /* VerticallyCenteredLabelImageAlignmentStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,10 +240,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8CE93E424A666ED0028B27F /* HomeView.swift in Sources */,
+				B8DB3FD424A7C25200AC9B70 /* SettingsView.swift in Sources */,
 				B8B4F2F624A6CA9A001AFC0E /* LazyVGridExample.swift in Sources */,
+				B8DB3FD124A7C18A00AC9B70 /* MainTabView.swift in Sources */,
 				B8CE93F124A6694A0028B27F /* HomeListStore.swift in Sources */,
 				B8CE93E224A666ED0028B27F /* wwdc_2020App.swift in Sources */,
 				B8B4F2F924A6D435001AFC0E /* WWDCLink.swift in Sources */,
+				B8DB3FD724A7D1E300AC9B70 /* UserSettings.swift in Sources */,
 				B8BCB15B24A6F89000F994BD /* VerticallyCenteredLabelImageAlignmentStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

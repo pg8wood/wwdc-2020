@@ -30,7 +30,7 @@ struct HomeView: View {
             }
             .navigationTitle("WWDC 2020")
             
-            Text("This Text view is the view that will show in iPad portrait mode before the user slides to reveal the above list.")
+            Text("This Text view is the view that will show in iPad portrait mode before the user slides to reveal the list, unless you add the `.navigationViewStyle(StackNavigationViewStyle())` modifier to the NavigationView.")
         }
     }
 }
