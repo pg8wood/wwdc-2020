@@ -14,15 +14,13 @@ struct wwdc_2020App: App {
     // Since this StateObject is at the App level, it's a source of truth that is shared with all the app's scenes
     @StateObject private var store = HomeListStore()
     @StateObject private var userSettings = UserSettings()
-//    @State private var accentColor: Color = .blue
-    
     
     var body: some Scene {
         WindowGroup {
             MainTabView()
                 .environmentObject(store)
                 .environmentObject(userSettings)
-                .accentColor(userSettings.accentColor)
+                .accentColor(AccentColor(rawValue: userSettings.accentColorString)?.color ?? .blue)
         }
     }
 }

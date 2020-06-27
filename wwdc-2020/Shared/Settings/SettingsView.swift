@@ -8,27 +8,18 @@
 import SwiftUI
 
 struct SettingsView: View {
-    
-    private let colors: [Color] = [
-        .blue,
-        .red,
-        .green,
-        .purple,
-        .orange
-    ]
-    
-    @Binding var accentColor: Color
+    @Binding var accentColorString: String
     
     var body: some View {
         NavigationView {
             VStack(alignment: .leading) {
                 Label("Accent Color", systemImage: "paintbrush")
                     .labelStyle(VerticallyCenteredLabelImageAlignmentStyle())
-                    .foregroundColor(accentColor)
+                    .foregroundColor(AccentColor(rawValue: accentColorString)?.color ?? .blue)
                 
-                Picker("Accent color", selection: $accentColor) {
-                    ForEach(colors, id: \.self) { color in
-                        Text(color.description)
+                Picker("Accent color", selection: $accentColorString) {
+                    ForEach(AccentColor.allCases, id: \.self) { colorSetting in
+                        Text(colorSetting.color.description).tag(colorSetting.rawValue)
                     }
                 }
                 .pickerStyle(SegmentedPickerStyle())
@@ -44,8 +35,8 @@ struct SettingsView: View {
     }
 }
 
-struct SettingsView_Previews: PreviewProvider {
-    static var previews: some View {
-        SettingsView(accentColor: .constant(.purple))
-    }
-}
+//struct SettingsView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SettingsView(accentColor: .constant(.purple))
+//    }
+//}

@@ -27,6 +27,8 @@
 		B8DB3FD424A7C25200AC9B70 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DB3FD224A7C25200AC9B70 /* SettingsView.swift */; };
 		B8DB3FD624A7D1E300AC9B70 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DB3FD524A7D1E300AC9B70 /* UserSettings.swift */; };
 		B8DB3FD724A7D1E300AC9B70 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DB3FD524A7D1E300AC9B70 /* UserSettings.swift */; };
+		B8DB3FE024A7EC9700AC9B70 /* AccentColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DB3FDF24A7EC9700AC9B70 /* AccentColor.swift */; };
+		B8DB3FE124A7EC9700AC9B70 /* AccentColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DB3FDF24A7EC9700AC9B70 /* AccentColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,7 @@
 		B8DB3FCF24A7C18A00AC9B70 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		B8DB3FD224A7C25200AC9B70 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		B8DB3FD524A7D1E300AC9B70 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		B8DB3FDF24A7EC9700AC9B70 /* AccentColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccentColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,12 +91,11 @@
 			children = (
 				B8CE93CE24A666EA0028B27F /* wwdc_2020App.swift */,
 				B8DB3FCF24A7C18A00AC9B70 /* MainTabView.swift */,
-				B8DB3FD224A7C25200AC9B70 /* SettingsView.swift */,
-				B8DB3FD524A7D1E300AC9B70 /* UserSettings.swift */,
 				B8CE93CF24A666EA0028B27F /* HomeView.swift */,
 				B8CE93EF24A6694A0028B27F /* HomeListStore.swift */,
 				B8B4F2F424A6CA9A001AFC0E /* LazyVGridExample.swift */,
 				B8B4F2F724A6D435001AFC0E /* WWDCLink.swift */,
+				B8DB3FE224A7ECA300AC9B70 /* Settings */,
 				B8BCB15C24A6FA8A00F994BD /* SwiftUI Bugfixes */,
 				B8CE93D024A666ED0028B27F /* Assets.xcassets */,
 			);
@@ -124,6 +126,16 @@
 				B8CE93E024A666ED0028B27F /* macOS.entitlements */,
 			);
 			path = macOS;
+			sourceTree = "<group>";
+		};
+		B8DB3FE224A7ECA300AC9B70 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				B8DB3FDF24A7EC9700AC9B70 /* AccentColor.swift */,
+				B8DB3FD224A7C25200AC9B70 /* SettingsView.swift */,
+				B8DB3FD524A7D1E300AC9B70 /* UserSettings.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8CE93E324A666ED0028B27F /* HomeView.swift in Sources */,
+				B8DB3FE024A7EC9700AC9B70 /* AccentColor.swift in Sources */,
 				B8DB3FD324A7C25200AC9B70 /* SettingsView.swift in Sources */,
 				B8B4F2F524A6CA9A001AFC0E /* LazyVGridExample.swift in Sources */,
 				B8DB3FD024A7C18A00AC9B70 /* MainTabView.swift in Sources */,
@@ -240,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8CE93E424A666ED0028B27F /* HomeView.swift in Sources */,
+				B8DB3FE124A7EC9700AC9B70 /* AccentColor.swift in Sources */,
 				B8DB3FD424A7C25200AC9B70 /* SettingsView.swift in Sources */,
 				B8B4F2F624A6CA9A001AFC0E /* LazyVGridExample.swift in Sources */,
 				B8DB3FD124A7C18A00AC9B70 /* MainTabView.swift in Sources */,
