@@ -11,6 +11,8 @@
 		B8B4F2F624A6CA9A001AFC0E /* LazyVGridExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B4F2F424A6CA9A001AFC0E /* LazyVGridExample.swift */; };
 		B8B4F2F824A6D435001AFC0E /* WWDCLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B4F2F724A6D435001AFC0E /* WWDCLinkView.swift */; };
 		B8B4F2F924A6D435001AFC0E /* WWDCLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B4F2F724A6D435001AFC0E /* WWDCLinkView.swift */; };
+		B8BCB15A24A6F89000F994BD /* VerticallyCenteredLabelImageAlignmentStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BCB15924A6F89000F994BD /* VerticallyCenteredLabelImageAlignmentStyle.swift */; };
+		B8BCB15B24A6F89000F994BD /* VerticallyCenteredLabelImageAlignmentStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BCB15924A6F89000F994BD /* VerticallyCenteredLabelImageAlignmentStyle.swift */; };
 		B8CE93E124A666ED0028B27F /* wwdc_2020App.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CE93CE24A666EA0028B27F /* wwdc_2020App.swift */; };
 		B8CE93E224A666ED0028B27F /* wwdc_2020App.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CE93CE24A666EA0028B27F /* wwdc_2020App.swift */; };
 		B8CE93E324A666ED0028B27F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CE93CF24A666EA0028B27F /* HomeView.swift */; };
@@ -24,6 +26,7 @@
 /* Begin PBXFileReference section */
 		B8B4F2F424A6CA9A001AFC0E /* LazyVGridExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyVGridExample.swift; sourceTree = "<group>"; };
 		B8B4F2F724A6D435001AFC0E /* WWDCLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWDCLinkView.swift; sourceTree = "<group>"; };
+		B8BCB15924A6F89000F994BD /* VerticallyCenteredLabelImageAlignmentStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticallyCenteredLabelImageAlignmentStyle.swift; sourceTree = "<group>"; };
 		B8CE93CE24A666EA0028B27F /* wwdc_2020App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wwdc_2020App.swift; sourceTree = "<group>"; };
 		B8CE93CF24A666EA0028B27F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		B8CE93D024A666ED0028B27F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -71,6 +74,7 @@
 				B8CE93EF24A6694A0028B27F /* HomeListStore.swift */,
 				B8B4F2F424A6CA9A001AFC0E /* LazyVGridExample.swift */,
 				B8B4F2F724A6D435001AFC0E /* WWDCLinkView.swift */,
+				B8BCB15924A6F89000F994BD /* VerticallyCenteredLabelImageAlignmentStyle.swift */,
 				B8CE93D024A666ED0028B27F /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -204,6 +208,7 @@
 				B8CE93F024A6694A0028B27F /* HomeListStore.swift in Sources */,
 				B8CE93E124A666ED0028B27F /* wwdc_2020App.swift in Sources */,
 				B8B4F2F824A6D435001AFC0E /* WWDCLinkView.swift in Sources */,
+				B8BCB15A24A6F89000F994BD /* VerticallyCenteredLabelImageAlignmentStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +221,7 @@
 				B8CE93F124A6694A0028B27F /* HomeListStore.swift in Sources */,
 				B8CE93E224A666ED0028B27F /* wwdc_2020App.swift in Sources */,
 				B8B4F2F924A6D435001AFC0E /* WWDCLinkView.swift in Sources */,
+				B8BCB15B24A6F89000F994BD /* VerticallyCenteredLabelImageAlignmentStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,22 +9,21 @@ import SwiftUI
 
 struct HomeView: View {
     @ObservedObject var store: HomeListStore
-    
-    @State private var isStacksSectionShowing: Bool = false
-    
+        
     var body: some View {
         NavigationView {
             List {
                 ForEach(store.exampleModels) { exampleModel in
                     Text(exampleModel.title)
                 }
-                
-                DisclosureGroup(isExpanded: $isStacksSectionShowing) {
+                                
+                DisclosureGroup {
                     NavigationLink(destination: LazyVGridExample()) {
                         Text("Lazy VGrid Example")
                     }
                 } label: {
-                    Text("Stacks, Grids, and Outlines")
+                    Label("Stacks, Grids, and Outlines", systemImage: "square.grid.3x3.fill")
+                        .labelStyle(VerticallyCenteredLabelImageAlignmentStyle()) // TODO: remove when Apple fixes the vertical alignment of the system image
                 }
             }
             .navigationTitle("WWDC 2020")
