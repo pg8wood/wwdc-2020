@@ -18,7 +18,8 @@ struct MainTabView: View {
                     Label("Home", systemImage: "house.fill")
                 }
             
-            SettingsView(accentColorString: $userSettings.accentColorString)
+            SettingsView()
+                .environmentObject(userSettings)
                 .tabItem {
                     Label("Settings", systemImage: "gear")
                 }
