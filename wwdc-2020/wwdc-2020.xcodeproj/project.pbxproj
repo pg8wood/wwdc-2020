@@ -98,7 +98,7 @@
 				B8CE93EF24A6694A0028B27F /* HomeListStore.swift */,
 				B8B4F2F424A6CA9A001AFC0E /* LazyVGridExample.swift */,
 				B8B4F2F724A6D435001AFC0E /* WWDCLink.swift */,
-				B8DB3FE324A80A7500AC9B70 /* EasyExpandingDisclosureGroup.swift */,
+				B8DB3FE624A8112500AC9B70 /* Common Views */,
 				B8DB3FE224A7ECA300AC9B70 /* Settings */,
 				B8BCB15C24A6FA8A00F994BD /* SwiftUI Bugfixes */,
 				B8CE93D024A666ED0028B27F /* Assets.xcassets */,
@@ -140,6 +140,14 @@
 				B8DB3FD524A7D1E300AC9B70 /* UserSettings.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		B8DB3FE624A8112500AC9B70 /* Common Views */ = {
+			isa = PBXGroup;
+			children = (
+				B8DB3FE324A80A7500AC9B70 /* EasyExpandingDisclosureGroup.swift */,
+			);
+			path = "Common Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -17,7 +17,7 @@ struct EasyExpandingDisclosureGroup<Content, Label>: View where Content: View,
     let label: () -> Label
     
     init(@ViewBuilder content: @escaping () -> Content,
-                      @ViewBuilder label: @escaping () -> Label) {
+         @ViewBuilder label: @escaping () -> Label) {
         self.content = content
         self.label = label
     }
@@ -28,15 +28,17 @@ struct EasyExpandingDisclosureGroup<Content, Label>: View where Content: View,
         }
         label: {
             label()
+                // All the below modifiers adjust the tap area of the view.
+                // See: https://www.hackingwithswift.com/quick-start/swiftui/how-to-control-the-tappable-area-of-a-view-using-contentshape
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .contentShape(Rectangle())
+                .onTapGesture {
+                    withAnimation {
+                        isExpanded.toggle()
+                    }
+                }
         }
-        // Adjust the tap area of the view.
-        // See: https://www.hackingwithswift.com/quick-start/swiftui/how-to-control-the-tappable-area-of-a-view-using-contentshape
-        .contentShape(Rectangle())
-        .onTapGesture {
-            withAnimation {
-                isExpanded.toggle()
-            }
-        }
+        
     }
 }
 
