@@ -41,13 +41,8 @@ struct LazyVGridExample: View {
             SizingControlsView(minimumItemSize: $minimumItemSize, spacing: $spacing)
             
             LazyVGrid(columns: columns, spacing: spacing) {
-                ForEach(sfSymbols, id: \.self) { symbol in
-                    SFSymbolView(named: symbol)
-                }
-                
-                ForEach(1...10000, id: \.self) { number in
-                    Text("\(number)")
-                        .font(.largeTitle)
+                ForEach(1...10000, id: \.self) { i in
+                    SFSymbolView(named: sfSymbols[i % sfSymbols.count])
                 }
             }
         }
@@ -56,7 +51,7 @@ struct LazyVGridExample: View {
     }
 }
 
-struct SizingControlsView: View {
+private struct SizingControlsView: View {
     @Binding var minimumItemSize: CGFloat
     @Binding var spacing: CGFloat
     
@@ -71,7 +66,7 @@ struct SizingControlsView: View {
     }
 }
 
-struct SFSymbolView: View {
+private struct SFSymbolView: View {
     let name: String
     
     init(named name: String) {
@@ -87,6 +82,8 @@ struct SFSymbolView: View {
 
 struct LazyVGridExample_Previews: PreviewProvider {
     static var previews: some View {
-        LazyVGridExample()
+        NavigationView {
+            LazyVGridExample()
+        }
     }
 }

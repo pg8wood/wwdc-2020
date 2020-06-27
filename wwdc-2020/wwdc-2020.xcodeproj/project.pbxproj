@@ -68,8 +68,8 @@
 			children = (
 				B8CE93CE24A666EA0028B27F /* wwdc_2020App.swift */,
 				B8CE93CF24A666EA0028B27F /* HomeView.swift */,
-				B8B4F2F424A6CA9A001AFC0E /* LazyVGridExample.swift */,
 				B8CE93EF24A6694A0028B27F /* HomeListStore.swift */,
+				B8B4F2F424A6CA9A001AFC0E /* LazyVGridExample.swift */,
 				B8B4F2F724A6D435001AFC0E /* WWDCLinkView.swift */,
 				B8CE93D024A666ED0028B27F /* Assets.xcassets */,
 			);
