@@ -20,29 +20,44 @@ struct HomeView: View {
                     Text(exampleModel.title)
                 }
                                 
-                DisclosureGroup {
-                    NavigationLink(destination: LazyVGridExample()) {
-                        Text("Lazy VGrid Example")
-                    }
-                } label: {
-                    Label("Stacks, Grids, and Outlines", systemImage: "square.grid.3x3.fill")
-                        .labelStyle(VerticallyCenteredLabelImageAlignmentStyle()) // TODO: remove when Apple fixes the vertical alignment of the system image
-                }
-                
-                DisclosureGroup {
-                    NavigationLink(destination: SettingsView()
-                                    .environmentObject(userSettings)) {
-                        Text("AppStorage Example")
-                    }
-                    Text("Scene Storage - TODO")
-                } label: {
-                    Label("Persistence", systemImage: "externaldrive")
-                        .labelStyle(VerticallyCenteredLabelImageAlignmentStyle())
-                }
+                StackDisclosureGroup()
+                PersistenceDisclosureGroup()
+                    .environmentObject(userSettings)
             }
             .navigationTitle("WWDC 2020")
             
             Text("This Text view is the view that will show in iPad portrait mode before the user slides to reveal the list, unless you add the `.navigationViewStyle(StackNavigationViewStyle())` modifier to the NavigationView.")
+        }
+    }
+}
+
+struct StackDisclosureGroup: View {
+    var body: some View {
+        EasyExpandingDisclosureGroup {
+            NavigationLink(destination: LazyVGridExample()) {
+                Text("Lazy VGrid Example")
+            }
+        } label: {
+            Label("Stacks, Grids, and Outlines", systemImage: "square.grid.3x3.fill")
+                .labelStyle(VerticallyCenteredLabelImageAlignmentStyle()) // TODO: remove when Apple fixes the vertical alignment of the system image
+        }
+        
+    }
+}
+
+struct PersistenceDisclosureGroup: View {
+    @EnvironmentObject var userSettings: UserSettings
+    
+    var body: some View {
+        EasyExpandingDisclosureGroup {
+            NavigationLink(destination: SettingsView()
+                            .environmentObject(userSettings)) {
+                Text("AppStorage Example")
+            }
+            Text("Scene Storage - TODO")
+        } label: {
+            Label("Persistence", systemImage: "externaldrive")
+                .labelStyle(VerticallyCenteredLabelImageAlignmentStyle())
         }
     }
 }

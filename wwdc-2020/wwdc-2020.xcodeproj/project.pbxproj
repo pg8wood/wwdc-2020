@@ -29,6 +29,8 @@
 		B8DB3FD724A7D1E300AC9B70 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DB3FD524A7D1E300AC9B70 /* UserSettings.swift */; };
 		B8DB3FE024A7EC9700AC9B70 /* AccentColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DB3FDF24A7EC9700AC9B70 /* AccentColor.swift */; };
 		B8DB3FE124A7EC9700AC9B70 /* AccentColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DB3FDF24A7EC9700AC9B70 /* AccentColor.swift */; };
+		B8DB3FE424A80A7500AC9B70 /* EasyExpandingDisclosureGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DB3FE324A80A7500AC9B70 /* EasyExpandingDisclosureGroup.swift */; };
+		B8DB3FE524A80A7500AC9B70 /* EasyExpandingDisclosureGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DB3FE324A80A7500AC9B70 /* EasyExpandingDisclosureGroup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,7 @@
 		B8DB3FD224A7C25200AC9B70 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		B8DB3FD524A7D1E300AC9B70 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		B8DB3FDF24A7EC9700AC9B70 /* AccentColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccentColor.swift; sourceTree = "<group>"; };
+		B8DB3FE324A80A7500AC9B70 /* EasyExpandingDisclosureGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyExpandingDisclosureGroup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +98,7 @@
 				B8CE93EF24A6694A0028B27F /* HomeListStore.swift */,
 				B8B4F2F424A6CA9A001AFC0E /* LazyVGridExample.swift */,
 				B8B4F2F724A6D435001AFC0E /* WWDCLink.swift */,
+				B8DB3FE324A80A7500AC9B70 /* EasyExpandingDisclosureGroup.swift */,
 				B8DB3FE224A7ECA300AC9B70 /* Settings */,
 				B8BCB15C24A6FA8A00F994BD /* SwiftUI Bugfixes */,
 				B8CE93D024A666ED0028B27F /* Assets.xcassets */,
@@ -243,6 +247,7 @@
 				B8CE93F024A6694A0028B27F /* HomeListStore.swift in Sources */,
 				B8CE93E124A666ED0028B27F /* wwdc_2020App.swift in Sources */,
 				B8B4F2F824A6D435001AFC0E /* WWDCLink.swift in Sources */,
+				B8DB3FE424A80A7500AC9B70 /* EasyExpandingDisclosureGroup.swift in Sources */,
 				B8DB3FD624A7D1E300AC9B70 /* UserSettings.swift in Sources */,
 				B8BCB15A24A6F89000F994BD /* VerticallyCenteredLabelImageAlignmentStyle.swift in Sources */,
 			);
@@ -260,6 +265,7 @@
 				B8CE93F124A6694A0028B27F /* HomeListStore.swift in Sources */,
 				B8CE93E224A666ED0028B27F /* wwdc_2020App.swift in Sources */,
 				B8B4F2F924A6D435001AFC0E /* WWDCLink.swift in Sources */,
+				B8DB3FE524A80A7500AC9B70 /* EasyExpandingDisclosureGroup.swift in Sources */,
 				B8DB3FD724A7D1E300AC9B70 /* UserSettings.swift in Sources */,
 				B8BCB15B24A6F89000F994BD /* VerticallyCenteredLabelImageAlignmentStyle.swift in Sources */,
 			);
