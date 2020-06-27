@@ -10,6 +10,8 @@ import SwiftUI
 struct HomeView: View {
     @ObservedObject var store: HomeListStore
     
+    @State private var isStacksSectionShowing: Bool = false
+    
     var body: some View {
         NavigationView {
             List {
@@ -17,9 +19,12 @@ struct HomeView: View {
                     Text(exampleModel.title)
                 }
                 
-                
-                NavigationLink(destination: LazyVGridExample()) {
-                    Text("Lazy VGrid Example")
+                DisclosureGroup(isExpanded: $isStacksSectionShowing) {
+                    NavigationLink(destination: LazyVGridExample()) {
+                        Text("Lazy VGrid Example")
+                    }
+                } label: {
+                    Text("Stacks, Grids, and Outlines")
                 }
             }
             .navigationTitle("WWDC 2020")
