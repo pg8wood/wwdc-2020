@@ -9,15 +9,17 @@ import SwiftUI
 
 @main
 struct wwdc_2020App: App {
+    @StateObject private var store = HomeListStore()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView(store: store)
         }
     }
 }
 
 struct wwdc_2020App_Previews: PreviewProvider {
     static var previews: some View {
-       ContentView()
+        HomeView(store: HomeListStore())
     }
 }
