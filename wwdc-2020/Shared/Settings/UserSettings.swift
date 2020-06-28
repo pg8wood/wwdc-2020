@@ -52,7 +52,7 @@ class UserSettings: ObservableObject {
     // MARK: - init
     
     init() {
-        if autoUpdateAccentColorInterval > 0 {
+        if autoUpdateAccentColor && autoUpdateAccentColorInterval > 0 {
             startChangingAccentColors(interval: autoUpdateAccentColorInterval)
         }
     }
