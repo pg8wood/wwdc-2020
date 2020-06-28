@@ -19,6 +19,10 @@ class UserSettings: ObservableObject {
         }
     }
     
+    var accentColor: Color {
+        AccentColor(rawValue: accentColorString)?.color ?? .blue
+    }
+    
     @AppStorage("autoUpdateAccentColor") var autoUpdateAccentColor = false {
         willSet {
             defer {

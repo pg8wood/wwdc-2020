@@ -20,7 +20,7 @@ struct wwdc_2020App: App {
             MainTabView()
                 .environmentObject(store)
                 .environmentObject(userSettings)
-                .accentColor(AccentColor(rawValue: userSettings.accentColorString)?.color ?? .blue)
+                .accentColor(userSettings.accentColor)
         }
     }
 }

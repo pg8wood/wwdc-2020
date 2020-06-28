@@ -34,7 +34,7 @@ struct AccentColorPickerView: View {
         VStack(alignment: .leading) {
             Label("Accent Color", systemImage: "paintbrush")
                 .labelStyle(VerticallyCenteredLabelImageAlignmentStyle())
-                .foregroundColor(AccentColor(rawValue: userSettings.accentColorString)?.color ?? .blue)
+                .foregroundColor(userSettings.accentColor)
             
             Picker("Accent color", selection: $userSettings.accentColorString) {
                 ForEach(AccentColor.allCases, id: \.self) { colorSetting in
