@@ -44,12 +44,9 @@ struct StackDisclosureGroup: View {
 }
 
 struct PersistenceDisclosureGroup: View {
-    @EnvironmentObject var userSettings: UserSettings
-    
     var body: some View {
         EasyExpandingDisclosureGroup {
-            NavigationLink(destination: SettingsView()
-                            .environmentObject(userSettings)) {
+            NavigationLink(destination: SettingsView()) {
                 Text("AppStorage Example")
             }
             Text("Scene Storage - TODO")

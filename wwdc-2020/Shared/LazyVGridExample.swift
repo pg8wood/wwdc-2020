@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LazyVGridExample: View {
     
-    let sfSymbols: [String] = [
+    private let sfSymbols: [String] = [
         "paperplane.fill",
         "calendar.circle.fill",
         "book.circle.fill",
@@ -38,7 +38,7 @@ struct LazyVGridExample: View {
             WWDCLink(title: "Stacks, Grids, and Outlines in SwiftUI", url: "https://developer.apple.com/wwdc20/10031")
                 .padding(.vertical, 20)
             
-            SizingControlsView(minimumItemSize: $minimumItemSize, spacing: $spacing)
+            SizingControlsView(minimumItemSize: $minimumItemSize, gridSpacing: $spacing)
             
             LazyVGrid(columns: columns, spacing: spacing) {
                 ForEach(1...10000, id: \.self) { i in
@@ -53,15 +53,16 @@ struct LazyVGridExample: View {
 
 private struct SizingControlsView: View {
     @Binding var minimumItemSize: CGFloat
-    @Binding var spacing: CGFloat
+    @Binding var gridSpacing: CGFloat
     
     var body: some View {
         Group {
-            Text("Grid Spacing: \(Int(spacing))")
-            Slider(value: $spacing, in: 0...200)
+            Text("Grid Spacing: \(Int(gridSpacing))")
+            Slider(value: $gridSpacing, in: 0...200)
             
             Text("Minimum item size: \(Int(minimumItemSize))")
             Slider(value: $minimumItemSize, in: 25...200)
+                .padding(.bottom, 20)
         }
     }
 }

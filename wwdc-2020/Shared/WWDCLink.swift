@@ -25,5 +25,7 @@ struct WWDCLink: View {
 struct WWDCLinkView_Previews: PreviewProvider {
     static var previews: some View {
         WWDCLink(title: "Apple Developer", url: "https://developer.apple.com")
+            .previewLayout(.sizeThatFits)
+            .padding()
     }
 }

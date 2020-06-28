@@ -23,5 +23,6 @@ struct MainTabView: View {
 struct TabBarView_Previews: PreviewProvider {
     static var previews: some View {
         MainTabView()
+            .environmentObject(HomeListStore())
     }
 }

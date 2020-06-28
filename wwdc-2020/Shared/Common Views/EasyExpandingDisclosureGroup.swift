@@ -11,10 +11,22 @@ import SwiftUI
 /// expanding that occurs when the user taps the disclosure indicator
 struct EasyExpandingDisclosureGroup<Content, Label>: View where Content: View,
                                                                 Label: View {
-    @State private var isExpanded = false
+    private var isExpandedBinding: Binding<Bool>?
+    
+    /// It would be great to have a single isExpanded that tries to get the binding or uses a fallback State variable, or at
+    /// least have an assertion here that fails when one tries to get the default value but `isExpandedBinding` is not nil
+    @State private var defaultIsExpanded = false
     
     let content: () -> Content
     let label: () -> Label
+    
+    init(isExpanded: Binding<Bool>,
+         @ViewBuilder content: @escaping () -> Content,
+         @ViewBuilder label: @escaping () -> Label) {
+        self.isExpandedBinding = isExpanded
+        self.content = content
+        self.label = label
+    }
     
     init(@ViewBuilder content: @escaping () -> Content,
          @ViewBuilder label: @escaping () -> Label) {
@@ -23,7 +35,7 @@ struct EasyExpandingDisclosureGroup<Content, Label>: View where Content: View,
     }
     
     var body: some View {
-        DisclosureGroup(isExpanded: $isExpanded) {
+        DisclosureGroup(isExpanded: isExpandedBinding ?? $defaultIsExpanded) {
             content()
         }
         label: {
@@ -34,7 +46,11 @@ struct EasyExpandingDisclosureGroup<Content, Label>: View where Content: View,
                 .contentShape(Rectangle())
                 .onTapGesture {
                     withAnimation {
-                        isExpanded.toggle()
+                        if let binding = isExpandedBinding {
+                            binding.wrappedValue.toggle()
+                        } else {
+                            defaultIsExpanded.toggle()
+                        }
                     }
                 }
         }
@@ -44,12 +60,23 @@ struct EasyExpandingDisclosureGroup<Content, Label>: View where Content: View,
 
 struct EasyExpandingDisclosureGroup_Previews: PreviewProvider {
     static var previews: some View {
-        List {
+        Group {
             EasyExpandingDisclosureGroup {
                 Text("Peekaboo")
             } label: {
                 Text("ViewBuilders are cool")
             }
+            
+            List {
+                EasyExpandingDisclosureGroup(isExpanded: .constant(true)) {
+                    Text("Peekaboo")
+                } label: {
+                    Text("ViewBuilders are cool")
+                }
+            }
+            .frame(height: 75)
         }
+        .previewLayout(.sizeThatFits)
+        .padding()
     }
 }
