@@ -30,8 +30,9 @@ struct HomeView: View {
 }
 
 struct StackDisclosureGroup: View {
+    @State private var isExpanded = true
     var body: some View {
-        EasyExpandingDisclosureGroup {
+        EasyExpandingDisclosureGroup(isExpanded: $isExpanded) {
             NavigationLink(destination: LazyVGridExample()) {
                 Text("Lazy VGrid Example")
             }
@@ -39,7 +40,6 @@ struct StackDisclosureGroup: View {
             Label("Stacks, Grids, and Outlines", systemImage: "square.grid.3x3.fill")
                 .labelStyle(VerticallyCenteredLabelImageAlignmentStyle()) // TODO: remove when Apple fixes the vertical alignment of the system image
         }
-        
     }
 }
 

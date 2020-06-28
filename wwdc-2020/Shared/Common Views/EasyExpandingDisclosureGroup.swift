@@ -11,31 +11,27 @@ import SwiftUI
 /// expanding that occurs when the user taps the disclosure indicator
 struct EasyExpandingDisclosureGroup<Content, Label>: View where Content: View,
                                                                 Label: View {
-    private var isExpandedBinding: Binding<Bool>?
-    
-    /// It would be great to have a single isExpanded that tries to get the binding or uses a fallback State variable, or at
-    /// least have an assertion here that fails when one tries to get the default value but `isExpandedBinding` is not nil
+    private var isExpanded: Binding<Bool>?
     @State private var defaultIsExpanded = false
     
-    let content: () -> Content
-    let label: () -> Label
+    private let content: () -> Content
+    private let label: () -> Label
     
-    init(isExpanded: Binding<Bool>,
+    init(isExpanded: Binding<Bool>? = nil,
          @ViewBuilder content: @escaping () -> Content,
-         @ViewBuilder label: @escaping () -> Label) {
-        self.isExpandedBinding = isExpanded
-        self.content = content
-        self.label = label
-    }
-    
-    init(@ViewBuilder content: @escaping () -> Content,
          @ViewBuilder label: @escaping () -> Label) {
         self.content = content
         self.label = label
     }
     
     var body: some View {
-        DisclosureGroup(isExpanded: isExpandedBinding ?? $defaultIsExpanded) {
+        let isExpanded = self.isExpanded ??
+            Binding(
+                get: { self.defaultIsExpanded },
+                set: { self.defaultIsExpanded = $0 }
+            )
+        
+        return DisclosureGroup(isExpanded: isExpanded) {
             content()
         }
         label: {
@@ -46,15 +42,10 @@ struct EasyExpandingDisclosureGroup<Content, Label>: View where Content: View,
                 .contentShape(Rectangle())
                 .onTapGesture {
                     withAnimation {
-                        if let binding = isExpandedBinding {
-                            binding.wrappedValue.toggle()
-                        } else {
-                            defaultIsExpanded.toggle()
-                        }
+                        isExpanded.wrappedValue.toggle()
                     }
                 }
         }
-        
     }
 }
 
