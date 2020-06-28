@@ -9,7 +9,6 @@ import SwiftUI
 
 struct HomeView: View {
     @ObservedObject var store: HomeListStore
-    @EnvironmentObject var userSettings: UserSettings
         
     var body: some View {
         NavigationView {
@@ -22,7 +21,6 @@ struct HomeView: View {
                                 
                 StackDisclosureGroup()
                 PersistenceDisclosureGroup()
-                    .environmentObject(userSettings)
             }
             .navigationTitle("WWDC 2020")
             

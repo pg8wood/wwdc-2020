@@ -9,12 +9,10 @@ import SwiftUI
 
 struct MainTabView: View {
     @EnvironmentObject var store: HomeListStore
-    @EnvironmentObject var userSettings: UserSettings
     
     var body: some View {
         TabView {
             HomeView(store: store)
-                .environmentObject(userSettings)
                 .tabItem {
                     Label("Home", systemImage: "house.fill")
                 }
