@@ -31,8 +31,15 @@ struct LocationPermissionsView<LocationManagerType: LocationManaging>: View {
 
 struct LocationPermissionsView_Previews: PreviewProvider {
     static var previews: some View {
-        LocationPermissionsView<MockLocationManager>()
-            .environmentObject(MockLocationManager())
-            .previewLayout(.sizeThatFits)
+        Group {
+            LocationPermissionsView<MockLocationManager>()
+                .environmentObject(MockLocationManager(authorizationStatus: .authorizedAlways))
+            
+            LocationPermissionsView<MockLocationManager>()
+                .environmentObject(MockLocationManager(authorizationStatus: .denied))
+            
+        }
+        .previewLayout(.sizeThatFits)
+        .environmentObject(UserSettings())
     }
 }

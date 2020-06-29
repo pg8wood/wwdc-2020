@@ -17,6 +17,10 @@
 		B8C85A0D24A98EE20040BA54 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C85A0B24A98EE20040BA54 /* LocationManager.swift */; };
 		B8C85A0F24AA51AF0040BA54 /* LocationPermissionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C85A0E24AA51AF0040BA54 /* LocationPermissionsView.swift */; };
 		B8C85A1024AA51B00040BA54 /* LocationPermissionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C85A0E24AA51AF0040BA54 /* LocationPermissionsView.swift */; };
+		B8C85A1324AA593D0040BA54 /* LocationManaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C85A1224AA593D0040BA54 /* LocationManaging.swift */; };
+		B8C85A1424AA593D0040BA54 /* LocationManaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C85A1224AA593D0040BA54 /* LocationManaging.swift */; };
+		B8C85A1624AA59590040BA54 /* MockLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C85A1524AA59590040BA54 /* MockLocationManager.swift */; };
+		B8C85A1724AA59590040BA54 /* MockLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C85A1524AA59590040BA54 /* MockLocationManager.swift */; };
 		B8CE93E124A666ED0028B27F /* wwdc_2020App.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CE93CE24A666EA0028B27F /* wwdc_2020App.swift */; };
 		B8CE93E224A666ED0028B27F /* wwdc_2020App.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CE93CE24A666EA0028B27F /* wwdc_2020App.swift */; };
 		B8CE93E324A666ED0028B27F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CE93CF24A666EA0028B27F /* HomeView.swift */; };
@@ -49,6 +53,8 @@
 		B8BCB15924A6F89000F994BD /* VerticallyCenteredLabelImageAlignmentStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticallyCenteredLabelImageAlignmentStyle.swift; sourceTree = "<group>"; };
 		B8C85A0B24A98EE20040BA54 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		B8C85A0E24AA51AF0040BA54 /* LocationPermissionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPermissionsView.swift; sourceTree = "<group>"; };
+		B8C85A1224AA593D0040BA54 /* LocationManaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManaging.swift; sourceTree = "<group>"; };
+		B8C85A1524AA59590040BA54 /* MockLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocationManager.swift; sourceTree = "<group>"; };
 		B8CE93CE24A666EA0028B27F /* wwdc_2020App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wwdc_2020App.swift; sourceTree = "<group>"; };
 		B8CE93CF24A666EA0028B27F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		B8CE93D024A666ED0028B27F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -92,6 +98,16 @@
 				B8BCB15924A6F89000F994BD /* VerticallyCenteredLabelImageAlignmentStyle.swift */,
 			);
 			path = "SwiftUI Bugfixes";
+			sourceTree = "<group>";
+		};
+		B8C85A1124AA59240040BA54 /* LocationManaging */ = {
+			isa = PBXGroup;
+			children = (
+				B8C85A1224AA593D0040BA54 /* LocationManaging.swift */,
+				B8C85A0B24A98EE20040BA54 /* LocationManager.swift */,
+				B8C85A1524AA59590040BA54 /* MockLocationManager.swift */,
+			);
+			path = LocationManaging;
 			sourceTree = "<group>";
 		};
 		B8CE93C824A666EA0028B27F = {
@@ -169,11 +185,11 @@
 		B8DB3FEA24A95FA300AC9B70 /* Core Location */ = {
 			isa = PBXGroup;
 			children = (
+				B8C85A1124AA59240040BA54 /* LocationManaging */,
 				B8DB3FE724A95C2D00AC9B70 /* MapView.swift */,
 				B8DB3FF124A96DD300AC9B70 /* NewLocationPermissionsInfoView.swift */,
 				B8DB3FEE24A95FDB00AC9B70 /* NewLocationPermissionsExampleView.swift */,
 				B8C85A0E24AA51AF0040BA54 /* LocationPermissionsView.swift */,
-				B8C85A0B24A98EE20040BA54 /* LocationManager.swift */,
 			);
 			path = "Core Location";
 			sourceTree = "<group>";
@@ -281,6 +297,7 @@
 				B8DB3FE024A7EC9700AC9B70 /* AccentColor.swift in Sources */,
 				B8DB3FD324A7C25200AC9B70 /* SettingsView.swift in Sources */,
 				B8B4F2F524A6CA9A001AFC0E /* LazyVGridExample.swift in Sources */,
+				B8C85A1324AA593D0040BA54 /* LocationManaging.swift in Sources */,
 				B8DB3FD024A7C18A00AC9B70 /* MainTabView.swift in Sources */,
 				B8CE93F024A6694A0028B27F /* HomeListStore.swift in Sources */,
 				B8C85A0F24AA51AF0040BA54 /* LocationPermissionsView.swift in Sources */,
@@ -288,6 +305,7 @@
 				B8CE93E124A666ED0028B27F /* wwdc_2020App.swift in Sources */,
 				B8B4F2F824A6D435001AFC0E /* WWDCLink.swift in Sources */,
 				B8DB3FEF24A95FDB00AC9B70 /* NewLocationPermissionsExampleView.swift in Sources */,
+				B8C85A1624AA59590040BA54 /* MockLocationManager.swift in Sources */,
 				B8DB3FE424A80A7500AC9B70 /* EasyExpandingDisclosureGroup.swift in Sources */,
 				B8DB3FD624A7D1E300AC9B70 /* UserSettings.swift in Sources */,
 				B8BCB15A24A6F89000F994BD /* VerticallyCenteredLabelImageAlignmentStyle.swift in Sources */,
@@ -304,6 +322,7 @@
 				B8DB3FE124A7EC9700AC9B70 /* AccentColor.swift in Sources */,
 				B8DB3FD424A7C25200AC9B70 /* SettingsView.swift in Sources */,
 				B8B4F2F624A6CA9A001AFC0E /* LazyVGridExample.swift in Sources */,
+				B8C85A1424AA593D0040BA54 /* LocationManaging.swift in Sources */,
 				B8DB3FD124A7C18A00AC9B70 /* MainTabView.swift in Sources */,
 				B8CE93F124A6694A0028B27F /* HomeListStore.swift in Sources */,
 				B8C85A1024AA51B00040BA54 /* LocationPermissionsView.swift in Sources */,
@@ -311,6 +330,7 @@
 				B8CE93E224A666ED0028B27F /* wwdc_2020App.swift in Sources */,
 				B8B4F2F924A6D435001AFC0E /* WWDCLink.swift in Sources */,
 				B8DB3FF024A95FDB00AC9B70 /* NewLocationPermissionsExampleView.swift in Sources */,
+				B8C85A1724AA59590040BA54 /* MockLocationManager.swift in Sources */,
 				B8DB3FE524A80A7500AC9B70 /* EasyExpandingDisclosureGroup.swift in Sources */,
 				B8DB3FD724A7D1E300AC9B70 /* UserSettings.swift in Sources */,
 				B8BCB15B24A6F89000F994BD /* VerticallyCenteredLabelImageAlignmentStyle.swift in Sources */,
