@@ -13,11 +13,20 @@ struct NewLocationPermissionsExampleView: View {
     @State private var isInfoSheetPresented = false
     
     var infoButton: some View {
-        Button {
+        func buttonActions() {
             isInfoSheetPresented = true
+        }
+        
+        return Button {
+            buttonActions()
         } label: {
             Image(systemName: "info.circle.fill")
                 .foregroundColor(userSettings.accentColor)
+        }
+        .frame(width: 35, height: 35, alignment: .trailing)
+        .contentShape(Rectangle())
+        .onTapGesture {
+            buttonActions()
         }
         .popover(isPresented: $isInfoSheetPresented) {
             NewLocationPermissionsInfoView(isPresented: $isInfoSheetPresented)
@@ -45,7 +54,9 @@ struct NewLocationPermissionsExampleView: View {
 
 struct NewLocationPermissionsExampleView_Previews: PreviewProvider {
     static var previews: some View {
-        NewLocationPermissionsExampleView()
-            .environmentObject(UserSettings())
+        NavigationView {
+            NewLocationPermissionsExampleView()
+                .environmentObject(UserSettings())
+        }
     }
 }

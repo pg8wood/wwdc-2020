@@ -30,7 +30,7 @@ Some CLLocationManager class methods have been deprecated.
                 Button {
                     isPresented = false
                 } label: {
-                    Text("Cool thanks ")
+                    Text("Done")
                 }
                 .foregroundColor(userSettings.accentColor)
                 
