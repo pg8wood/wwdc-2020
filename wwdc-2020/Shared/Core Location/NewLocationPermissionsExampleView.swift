@@ -46,8 +46,8 @@ struct NewLocationPermissionsExampleView: View {
     
     var body: some View {
         ZStack(alignment: .top) {
-            MapView()
-            
+            MapView<LocationManager>()
+                .environmentObject(locationManager)
             LocationPermissionsView<LocationManager>()
                 .environmentObject(locationManager)
         }
@@ -55,7 +55,7 @@ struct NewLocationPermissionsExampleView: View {
         .navigationBarItems(trailing: infoButton)
         .navigationBarTitleDisplayMode(.inline)
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-        .edgesIgnoringSafeArea(.bottom)
+        .edgesIgnoringSafeArea([.leading, .trailing, .bottom])
     }
 }
 

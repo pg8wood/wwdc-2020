@@ -24,7 +24,7 @@ struct LocationPermissionsView<LocationManagerType: LocationManaging>: View {
                     .font(.caption)
             }
             
-            WWDCLink(title: "Open Settings", url: UIApplication.openSettingsURLString, image: "gear")
+            WWDCLink(title: "Change Location Settings", url: UIApplication.openSettingsURLString, image: "gear")
         }
         .padding()
         .frame(minWidth: 0, maxWidth: .infinity)

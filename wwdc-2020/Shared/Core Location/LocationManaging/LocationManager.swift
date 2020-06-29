@@ -11,16 +11,8 @@ import os
 
 class LocationManager: NSObject, LocationManaging, CLLocationManagerDelegate {
     private(set) var locationManager = CLLocationManager()
-    
-    // MARK: - Publishers
-    
-    let objectWillChange = PassthroughSubject<Void, Never>()
         
-    @Published var lastLocation: CLLocation? {
-        willSet {
-            objectWillChange.send()
-        }
-    }
+    let objectWillChange = PassthroughSubject<Void, Never>()
     
     // MARK: - LocationManaging
     
@@ -40,6 +32,12 @@ class LocationManager: NSObject, LocationManaging, CLLocationManagerDelegate {
         }
     }
     
+    @Published var lastLocation: CLLocation? {
+        willSet {
+            objectWillChange.send()
+        }
+    }
+    
     func requestAuthorization(_ type: LocationAuthorizationRequestType) {
         switch type {
         case .always:
@@ -47,6 +45,8 @@ class LocationManager: NSObject, LocationManaging, CLLocationManagerDelegate {
         case .whenInUse:
             locationManager.requestWhenInUseAuthorization()
         }
+        
+        locationManager.startUpdatingLocation()
     }
     
     // MARK: - init
@@ -89,7 +89,7 @@ class LocationManager: NSObject, LocationManaging, CLLocationManagerDelegate {
             os_log("unknown accuracy authorization")
         }
     }
-    
+        
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
         self.lastLocation = location
