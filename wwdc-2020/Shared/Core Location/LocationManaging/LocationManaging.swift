@@ -13,15 +13,15 @@ enum LocationAuthorizationRequestType {
 }
 
 protocol LocationManaging: ObservableObject, Identifiable {
-    var authorizationStatus: CLAuthorizationStatus? { get }
-    var authorizationStatusDescription: String { get }
+    var authorizationStatus: CLAuthorizationStatus { get }
+    var accuracyAuthorization: CLAccuracyAuthorization { get }
     
     func requestAuthorization(_ type: LocationAuthorizationRequestType)
 }
 
-extension LocationManaging {
-    var authorizationStatusDescription: String {
-        switch authorizationStatus {
+extension CLAuthorizationStatus {
+    var description: String {
+        switch self {
         case .notDetermined: return "Not determined"
         case .authorizedWhenInUse: return "Authorized when in use"
         case .authorizedAlways: return "Authorized always"

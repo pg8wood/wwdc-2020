@@ -26,7 +26,15 @@ class LocationManager: NSObject, LocationManaging, CLLocationManagerDelegate {
     
     typealias AuthorizationStatus = CLAuthorizationStatus
     
-    @Published var authorizationStatus: CLAuthorizationStatus? {
+    @Published var authorizationStatus: CLAuthorizationStatus = .notDetermined
+    {
+        willSet {
+            objectWillChange.send()
+        }
+    }
+    
+    @Published var accuracyAuthorization: CLAccuracyAuthorization = .reducedAccuracy
+    {
         willSet {
             objectWillChange.send()
         }
@@ -69,8 +77,10 @@ class LocationManager: NSObject, LocationManaging, CLLocationManagerDelegate {
             os_log("unknown authorization case")
         }
         
+        let accuracyAuthorization = manager.accuracyAuthorization
+        self.accuracyAuthorization = accuracyAuthorization
         // TODO
-        switch manager.accuracyAuthorization {
+        switch accuracyAuthorization {
         case .fullAccuracy:
             break
         case .reducedAccuracy:

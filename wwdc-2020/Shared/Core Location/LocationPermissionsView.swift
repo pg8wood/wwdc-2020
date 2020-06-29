@@ -10,15 +10,21 @@ import SwiftUI
 struct LocationPermissionsView<LocationManagerType: LocationManaging>: View {
     @EnvironmentObject var locationManager: LocationManagerType
     
+    private var preciseLocationDescription: String {
+        "Precise Location: \(locationManager.accuracyAuthorization == .fullAccuracy ? "on" : "off")"
+    }
+    
     var body: some View {
         VStack(spacing: 10) {
-            Text("Location permissions: \(locationManager.authorizationStatusDescription)")
+            Text("Location permissions: \(locationManager.authorizationStatus.description)")
                 .font(.caption)
             
-            if case .denied = locationManager.authorizationStatus {
-                WWDCLink(title: "Open Settings", url: UIApplication.openSettingsURLString, image: "gear")
+            if locationManager.authorizationStatus != .denied {
+                Text(preciseLocationDescription)
+                    .font(.caption)
             }
             
+            WWDCLink(title: "Open Settings", url: UIApplication.openSettingsURLString, image: "gear")
         }
         .padding()
         .frame(minWidth: 0, maxWidth: .infinity)
@@ -33,10 +39,10 @@ struct LocationPermissionsView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             LocationPermissionsView<MockLocationManager>()
-                .environmentObject(MockLocationManager(authorizationStatus: .authorizedAlways))
+                .environmentObject(MockLocationManager(authorizationStatus: .authorizedAlways, accuracyAuthorization: .fullAccuracy))
             
             LocationPermissionsView<MockLocationManager>()
-                .environmentObject(MockLocationManager(authorizationStatus: .denied))
+                .environmentObject(MockLocationManager(authorizationStatus: .denied, accuracyAuthorization: .fullAccuracy))
             
         }
         .previewLayout(.sizeThatFits)

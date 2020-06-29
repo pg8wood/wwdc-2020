@@ -9,10 +9,12 @@ import os
 import CoreLocation
 
 class MockLocationManager: LocationManaging {
-    var authorizationStatus: CLAuthorizationStatus?
+    var authorizationStatus: CLAuthorizationStatus
+    var accuracyAuthorization: CLAccuracyAuthorization
         
-    init(authorizationStatus: CLAuthorizationStatus?) {
+    init(authorizationStatus: CLAuthorizationStatus, accuracyAuthorization: CLAccuracyAuthorization) {
         self.authorizationStatus = authorizationStatus
+        self.accuracyAuthorization = accuracyAuthorization
     }
     
     func requestAuthorization(_ type: LocationAuthorizationRequestType) {
