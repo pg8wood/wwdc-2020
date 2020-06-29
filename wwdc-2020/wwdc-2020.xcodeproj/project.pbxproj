@@ -13,6 +13,10 @@
 		B8B4F2F924A6D435001AFC0E /* WWDCLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B4F2F724A6D435001AFC0E /* WWDCLink.swift */; };
 		B8BCB15A24A6F89000F994BD /* VerticallyCenteredLabelImageAlignmentStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BCB15924A6F89000F994BD /* VerticallyCenteredLabelImageAlignmentStyle.swift */; };
 		B8BCB15B24A6F89000F994BD /* VerticallyCenteredLabelImageAlignmentStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BCB15924A6F89000F994BD /* VerticallyCenteredLabelImageAlignmentStyle.swift */; };
+		B8C85A0C24A98EE20040BA54 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C85A0B24A98EE20040BA54 /* LocationManager.swift */; };
+		B8C85A0D24A98EE20040BA54 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C85A0B24A98EE20040BA54 /* LocationManager.swift */; };
+		B8C85A0F24AA51AF0040BA54 /* LocationPermissionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C85A0E24AA51AF0040BA54 /* LocationPermissionsView.swift */; };
+		B8C85A1024AA51B00040BA54 /* LocationPermissionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C85A0E24AA51AF0040BA54 /* LocationPermissionsView.swift */; };
 		B8CE93E124A666ED0028B27F /* wwdc_2020App.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CE93CE24A666EA0028B27F /* wwdc_2020App.swift */; };
 		B8CE93E224A666ED0028B27F /* wwdc_2020App.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CE93CE24A666EA0028B27F /* wwdc_2020App.swift */; };
 		B8CE93E324A666ED0028B27F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CE93CF24A666EA0028B27F /* HomeView.swift */; };
@@ -43,6 +47,8 @@
 		B8B4F2F424A6CA9A001AFC0E /* LazyVGridExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyVGridExample.swift; sourceTree = "<group>"; };
 		B8B4F2F724A6D435001AFC0E /* WWDCLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWDCLink.swift; sourceTree = "<group>"; };
 		B8BCB15924A6F89000F994BD /* VerticallyCenteredLabelImageAlignmentStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticallyCenteredLabelImageAlignmentStyle.swift; sourceTree = "<group>"; };
+		B8C85A0B24A98EE20040BA54 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		B8C85A0E24AA51AF0040BA54 /* LocationPermissionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPermissionsView.swift; sourceTree = "<group>"; };
 		B8CE93CE24A666EA0028B27F /* wwdc_2020App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wwdc_2020App.swift; sourceTree = "<group>"; };
 		B8CE93CF24A666EA0028B27F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		B8CE93D024A666ED0028B27F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -108,7 +114,7 @@
 				B8B4F2F424A6CA9A001AFC0E /* LazyVGridExample.swift */,
 				B8B4F2F724A6D435001AFC0E /* WWDCLink.swift */,
 				B8DB3FE624A8112500AC9B70 /* Common Views */,
-				B8DB3FEA24A95FA300AC9B70 /* MapKit */,
+				B8DB3FEA24A95FA300AC9B70 /* Core Location */,
 				B8DB3FE224A7ECA300AC9B70 /* Settings */,
 				B8BCB15C24A6FA8A00F994BD /* SwiftUI Bugfixes */,
 				B8CE93D024A666ED0028B27F /* Assets.xcassets */,
@@ -160,14 +166,16 @@
 			path = "Common Views";
 			sourceTree = "<group>";
 		};
-		B8DB3FEA24A95FA300AC9B70 /* MapKit */ = {
+		B8DB3FEA24A95FA300AC9B70 /* Core Location */ = {
 			isa = PBXGroup;
 			children = (
 				B8DB3FE724A95C2D00AC9B70 /* MapView.swift */,
 				B8DB3FF124A96DD300AC9B70 /* NewLocationPermissionsInfoView.swift */,
 				B8DB3FEE24A95FDB00AC9B70 /* NewLocationPermissionsExampleView.swift */,
+				B8C85A0E24AA51AF0040BA54 /* LocationPermissionsView.swift */,
+				B8C85A0B24A98EE20040BA54 /* LocationManager.swift */,
 			);
-			path = MapKit;
+			path = "Core Location";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,11 +277,13 @@
 			files = (
 				B8CE93E324A666ED0028B27F /* HomeView.swift in Sources */,
 				B8DB3FE824A95C2D00AC9B70 /* MapView.swift in Sources */,
+				B8C85A0C24A98EE20040BA54 /* LocationManager.swift in Sources */,
 				B8DB3FE024A7EC9700AC9B70 /* AccentColor.swift in Sources */,
 				B8DB3FD324A7C25200AC9B70 /* SettingsView.swift in Sources */,
 				B8B4F2F524A6CA9A001AFC0E /* LazyVGridExample.swift in Sources */,
 				B8DB3FD024A7C18A00AC9B70 /* MainTabView.swift in Sources */,
 				B8CE93F024A6694A0028B27F /* HomeListStore.swift in Sources */,
+				B8C85A0F24AA51AF0040BA54 /* LocationPermissionsView.swift in Sources */,
 				B8DB3FF224A96DD300AC9B70 /* NewLocationPermissionsInfoView.swift in Sources */,
 				B8CE93E124A666ED0028B27F /* wwdc_2020App.swift in Sources */,
 				B8B4F2F824A6D435001AFC0E /* WWDCLink.swift in Sources */,
@@ -290,11 +300,13 @@
 			files = (
 				B8CE93E424A666ED0028B27F /* HomeView.swift in Sources */,
 				B8DB3FE924A95C2D00AC9B70 /* MapView.swift in Sources */,
+				B8C85A0D24A98EE20040BA54 /* LocationManager.swift in Sources */,
 				B8DB3FE124A7EC9700AC9B70 /* AccentColor.swift in Sources */,
 				B8DB3FD424A7C25200AC9B70 /* SettingsView.swift in Sources */,
 				B8B4F2F624A6CA9A001AFC0E /* LazyVGridExample.swift in Sources */,
 				B8DB3FD124A7C18A00AC9B70 /* MainTabView.swift in Sources */,
 				B8CE93F124A6694A0028B27F /* HomeListStore.swift in Sources */,
+				B8C85A1024AA51B00040BA54 /* LocationPermissionsView.swift in Sources */,
 				B8DB3FF324A96DD300AC9B70 /* NewLocationPermissionsInfoView.swift in Sources */,
 				B8CE93E224A666ED0028B27F /* wwdc_2020App.swift in Sources */,
 				B8B4F2F924A6D435001AFC0E /* WWDCLink.swift in Sources */,

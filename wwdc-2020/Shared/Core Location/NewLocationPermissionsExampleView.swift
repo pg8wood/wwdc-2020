@@ -11,6 +11,10 @@ struct NewLocationPermissionsExampleView: View {
     @EnvironmentObject var userSettings: UserSettings
     
     @State private var isInfoSheetPresented = false
+    @State private var locationType: LocationAuthorizationRequestType = .whenInUse
+    
+    // TODO locationmanaging
+    @ObservedObject var locationManager = LocationManager()
     
     var infoButton: some View {
         func buttonActions() {
@@ -41,14 +45,17 @@ struct NewLocationPermissionsExampleView: View {
     }
     
     var body: some View {
-        VStack(alignment: .leading) {
-            Text("test this is a long lable here ok thanks")
+        ZStack(alignment: .top) {
             MapView()
+            
+            LocationPermissionsView<LocationManager>()
+                .environmentObject(locationManager)
         }
         .navigationTitle("MapKit")
         .navigationBarItems(trailing: infoButton)
+        .navigationBarTitleDisplayMode(.inline)
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-        
+        .edgesIgnoringSafeArea(.bottom)
     }
 }
 

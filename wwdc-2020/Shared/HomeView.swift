@@ -23,7 +23,8 @@ struct HomeView: View {
                 PersistenceDisclosureGroup()
                 
                 NavigationLink(destination: NewLocationPermissionsExampleView()) {
-                    Text("MapKit")
+                    Label("Core Location", systemImage: "mappin.circle")
+                        .labelStyle(VerticallyCenteredLabelImageAlignmentStyle())
                 }
             }
             .navigationTitle("WWDC 2020")
@@ -53,6 +54,8 @@ struct PersistenceDisclosureGroup: View {
             NavigationLink(destination: SettingsView()) {
                 Text("@AppStorage and Combine")
             }
+            
+            Text("Core Data - TODO")
         } label: {
             Label("Persistence", systemImage: "externaldrive")
                 .labelStyle(VerticallyCenteredLabelImageAlignmentStyle())

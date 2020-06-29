@@ -33,8 +33,7 @@ struct EasyExpandingDisclosureGroup<Content, Label>: View where Content: View,
         
         return DisclosureGroup(isExpanded: isExpanded) {
             content()
-        }
-        label: {
+        } label: {
             label()
                 // All the below modifiers adjust the tap area of the view.
                 // See: https://www.hackingwithswift.com/quick-start/swiftui/how-to-control-the-tappable-area-of-a-view-using-contentshape
