@@ -21,6 +21,10 @@ struct HomeView: View {
                                 
                 StackDisclosureGroup()
                 PersistenceDisclosureGroup()
+                
+                NavigationLink(destination: NewLocationPermissionsExampleView()) {
+                    Text("MapKit")
+                }
             }
             .navigationTitle("WWDC 2020")
             
