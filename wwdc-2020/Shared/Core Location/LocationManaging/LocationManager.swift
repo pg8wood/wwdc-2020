@@ -7,6 +7,7 @@
 
 import Combine
 import CoreLocation
+import MapKit
 import os
 
 class LocationManager: NSObject, LocationManaging, CLLocationManagerDelegate {
@@ -32,7 +33,11 @@ class LocationManager: NSObject, LocationManaging, CLLocationManagerDelegate {
         }
     }
     
-    @Published var lastLocation: CLLocation? {
+    @Published var userCoordinateRegion: MKCoordinateRegion = {
+        let usaCenterCoordinate = CLLocationCoordinate2D(latitude: 37.0902, longitude: -95.7129)
+        let usaCoordinateSpan = MKCoordinateSpan(latitudeDelta: 0, longitudeDelta: 60)
+        return MKCoordinateRegion(center: usaCenterCoordinate, span: usaCoordinateSpan)
+    }() {
         willSet {
             objectWillChange.send()
         }
@@ -92,6 +97,11 @@ class LocationManager: NSObject, LocationManaging, CLLocationManagerDelegate {
         
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
-        self.lastLocation = location
+        
+        let mapRegionMeters = CLLocationDistance(exactly: locationManager.accuracyAuthorization == .fullAccuracy ? 500 : 8000)!
+        
+        userCoordinateRegion = MKCoordinateRegion(center: location.coordinate,
+                                                  latitudinalMeters: mapRegionMeters,
+                                                  longitudinalMeters: mapRegionMeters)
     }
 }

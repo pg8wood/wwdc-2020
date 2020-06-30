@@ -7,18 +7,25 @@
 
 import os
 import CoreLocation
+import MapKit
 
 class MockLocationManager: LocationManaging {
+    static var usaCoordinateRegion: MKCoordinateRegion = {
+        let usaCenterCoordinate = CLLocationCoordinate2D(latitude: 37.0902, longitude: -95.7129)
+        let usaCoordinateSpan = MKCoordinateSpan(latitudeDelta: 0, longitudeDelta: 60)
+        return MKCoordinateRegion(center: usaCenterCoordinate, span: usaCoordinateSpan)
+    }()
+    
     var authorizationStatus: CLAuthorizationStatus
     var accuracyAuthorization: CLAccuracyAuthorization
-    var lastLocation: CLLocation?
+    var userCoordinateRegion: MKCoordinateRegion
         
     init(authorizationStatus: CLAuthorizationStatus,
          accuracyAuthorization: CLAccuracyAuthorization,
-         lastLocation: CLLocation? = nil) {
+         userCoordinateRegion: MKCoordinateRegion = MockLocationManager.usaCoordinateRegion) {
         self.authorizationStatus = authorizationStatus
         self.accuracyAuthorization = accuracyAuthorization
-        self.lastLocation = lastLocation
+        self.userCoordinateRegion = userCoordinateRegion
     }
     
     func requestAuthorization(_ type: LocationAuthorizationRequestType) {

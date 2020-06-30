@@ -6,6 +6,7 @@
 //
 
 import CoreLocation
+import MapKit
 
 enum LocationAuthorizationRequestType {
     case always
@@ -15,7 +16,7 @@ enum LocationAuthorizationRequestType {
 protocol LocationManaging: ObservableObject, Identifiable {
     var authorizationStatus: CLAuthorizationStatus { get }
     var accuracyAuthorization: CLAccuracyAuthorization { get }
-    var lastLocation: CLLocation? { get }
+    var userCoordinateRegion: MKCoordinateRegion { get set }
     
     func requestAuthorization(_ type: LocationAuthorizationRequestType)
 }
