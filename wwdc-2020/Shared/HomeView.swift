@@ -21,6 +21,7 @@ struct HomeView: View {
                                 
                 StackDisclosureGroup()
                 PersistenceDisclosureGroup()
+                ProgressViewsLink()
                 
                 NavigationLink(destination: NewLocationPermissionsExampleView()) {
                     Label("Core Location", systemImage: "mappin.circle")
@@ -63,6 +64,21 @@ struct PersistenceDisclosureGroup: View {
     }
 }
 
+struct ProgressViewsLink: View {
+    var body: some View {
+        NavigationLink(destination: ProgressViewExampleView()) {
+            // The padding applied to both items is to fix what I'm assuming is just a bug in the 1st iOS 14.0 beta
+            Label {
+                Text("Progress Views")
+                    .padding(.leading, -10)
+            } icon: {
+                ProgressView()
+                    .padding(.leading, -8)
+            }
+        }
+    }
+}
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
@@ -72,5 +88,6 @@ struct ContentView_Previews: PreviewProvider {
             HomeView(store: HomeListStore())
                 .previewDevice(PreviewDevice(rawValue: "iPad Pro (12.9-inch) (4th generation)"))
         }
+        .environmentObject(UserSettings())
     }
 }

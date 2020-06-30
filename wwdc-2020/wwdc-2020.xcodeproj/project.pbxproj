@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B81F177124ABD06D008018A7 /* ProgressViewExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81F177024ABD06D008018A7 /* ProgressViewExampleView.swift */; };
+		B81F177324ABDCB0008018A7 /* ProgressViewExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81F177024ABD06D008018A7 /* ProgressViewExampleView.swift */; };
 		B8B4F2F524A6CA9A001AFC0E /* LazyVGridExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B4F2F424A6CA9A001AFC0E /* LazyVGridExample.swift */; };
 		B8B4F2F624A6CA9A001AFC0E /* LazyVGridExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B4F2F424A6CA9A001AFC0E /* LazyVGridExample.swift */; };
 		B8B4F2F824A6D435001AFC0E /* WWDCLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B4F2F724A6D435001AFC0E /* WWDCLink.swift */; };
@@ -48,6 +50,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B81F177024ABD06D008018A7 /* ProgressViewExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewExampleView.swift; sourceTree = "<group>"; };
 		B8B4F2F424A6CA9A001AFC0E /* LazyVGridExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyVGridExample.swift; sourceTree = "<group>"; };
 		B8B4F2F724A6D435001AFC0E /* WWDCLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWDCLink.swift; sourceTree = "<group>"; };
 		B8BCB15924A6F89000F994BD /* VerticallyCenteredLabelImageAlignmentStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticallyCenteredLabelImageAlignmentStyle.swift; sourceTree = "<group>"; };
@@ -126,6 +129,7 @@
 				B8CE93CE24A666EA0028B27F /* wwdc_2020App.swift */,
 				B8DB3FCF24A7C18A00AC9B70 /* MainTabView.swift */,
 				B8CE93CF24A666EA0028B27F /* HomeView.swift */,
+				B81F177024ABD06D008018A7 /* ProgressViewExampleView.swift */,
 				B8CE93EF24A6694A0028B27F /* HomeListStore.swift */,
 				B8B4F2F424A6CA9A001AFC0E /* LazyVGridExample.swift */,
 				B8B4F2F724A6D435001AFC0E /* WWDCLink.swift */,
@@ -304,6 +308,7 @@
 				B8DB3FF224A96DD300AC9B70 /* NewLocationPermissionsInfoView.swift in Sources */,
 				B8CE93E124A666ED0028B27F /* wwdc_2020App.swift in Sources */,
 				B8B4F2F824A6D435001AFC0E /* WWDCLink.swift in Sources */,
+				B81F177124ABD06D008018A7 /* ProgressViewExampleView.swift in Sources */,
 				B8DB3FEF24A95FDB00AC9B70 /* NewLocationPermissionsExampleView.swift in Sources */,
 				B8C85A1624AA59590040BA54 /* MockLocationManager.swift in Sources */,
 				B8DB3FE424A80A7500AC9B70 /* EasyExpandingDisclosureGroup.swift in Sources */,
@@ -329,6 +334,7 @@
 				B8DB3FF324A96DD300AC9B70 /* NewLocationPermissionsInfoView.swift in Sources */,
 				B8CE93E224A666ED0028B27F /* wwdc_2020App.swift in Sources */,
 				B8B4F2F924A6D435001AFC0E /* WWDCLink.swift in Sources */,
+				B81F177324ABDCB0008018A7 /* ProgressViewExampleView.swift in Sources */,
 				B8DB3FF024A95FDB00AC9B70 /* NewLocationPermissionsExampleView.swift in Sources */,
 				B8C85A1724AA59590040BA54 /* MockLocationManager.swift in Sources */,
 				B8DB3FE524A80A7500AC9B70 /* EasyExpandingDisclosureGroup.swift in Sources */,
