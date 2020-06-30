@@ -68,37 +68,14 @@ class LocationManager: NSObject, LocationManaging, CLLocationManagerDelegate {
      // MARK: - CLLocationManagerDelegate
     
      func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
-        let authorizationStatus = manager.authorizationStatus()
-        self.authorizationStatus = authorizationStatus
-        // TODO
-        switch authorizationStatus {
-        case .authorizedAlways, .authorizedWhenInUse:
-            break
-        case .notDetermined, .denied:
-            break
-        case .restricted:
-            break
-        @unknown default:
-            os_log("unknown authorization case")
-        }
-        
-        let accuracyAuthorization = manager.accuracyAuthorization
-        self.accuracyAuthorization = accuracyAuthorization
-        // TODO
-        switch accuracyAuthorization {
-        case .fullAccuracy:
-            break
-        case .reducedAccuracy:
-            break
-        @unknown default:
-            os_log("unknown accuracy authorization")
-        }
+        self.authorizationStatus = manager.authorizationStatus()
+        self.accuracyAuthorization = manager.accuracyAuthorization
     }
         
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
         
-        let mapRegionMeters = CLLocationDistance(exactly: locationManager.accuracyAuthorization == .fullAccuracy ? 500 : 8000)!
+        let mapRegionMeters = CLLocationDistance(exactly: locationManager.accuracyAuthorization == .fullAccuracy ? 1000 : 8000)!
         
         userCoordinateRegion = MKCoordinateRegion(center: location.coordinate,
                                                   latitudinalMeters: mapRegionMeters,
