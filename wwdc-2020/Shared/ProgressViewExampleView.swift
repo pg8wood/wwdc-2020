@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 protocol TypeErasing {
     var erasedValue: Any { get }
@@ -51,11 +52,9 @@ struct AnyProgressViewStyle: ProgressViewStyle {
 }
 
 struct ProgressViewExampleView: View {
-    
-    @State private var progress = 0.5
-    
+    @State private var cancellables = Set<AnyCancellable>()
+    @State private var currentProgressViewStyle: ProgressStyle = .default
     @State private var downloadAmount = 0.0
-    let timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
     
     enum ProgressStyle: String, CaseIterable {
         case `default` = "Default"
@@ -75,35 +74,44 @@ struct ProgressViewExampleView: View {
         }
     }
     
-    @State private var currentProgressViewStyle: ProgressStyle = .default
     
+
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
+            Text("Progress View Style") // label isn't rendered with SegmentedPickerStyle, so we need one here
+                .font(.headline)
             Picker(selection: $currentProgressViewStyle, label: Text("Progress View Style")) {
                 ForEach(ProgressStyle.allCases, id: \.self) {
                     Text($0.rawValue)
                 }
             }
             .pickerStyle(SegmentedPickerStyle())
-            
-            ProgressView("Default Progress View", value: progress)
-                .progressViewStyle(currentProgressViewStyle.body)
-            
-            Button("More", action: { progress += 0.05 })
-            
+    
+            Text("The default style will vary based on the platform.")
+                .font(.caption2)
+                .padding(.bottom, 20)
+
             ProgressView("Downloading…", value: downloadAmount, total: 100)
                 .progressViewStyle(currentProgressViewStyle.body)
-                .onReceive(timer) { _ in
-                    downloadAmount = (downloadAmount + 2).truncatingRemainder(dividingBy: 100)
-                }
+                .frame(minWidth: 0, maxWidth: .infinity)
+            
+            Spacer()
         }
         .padding()
+        .navigationTitle("Progress Views")
+        .onAppear {
+            Timer.publish(every: 1, on: .main, in: .common)
+                .autoconnect()
+                .sink() { _ in
+                    downloadAmount = (downloadAmount + 2).truncatingRemainder(dividingBy: 100)
+                }
+                .store(in: &cancellables)
+        }
     }
 }
 
 struct ProgressViews_Previews: PreviewProvider {
     static var previews: some View {
         ProgressViewExampleView()
-//            .previewLayout(.sizeThatFits)
     }
 }
