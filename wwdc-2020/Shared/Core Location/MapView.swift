@@ -18,3 +18,5 @@ struct MapView<LocationManagerType: LocationManaging>: View {
         Map(coordinateRegion: $locationManager.userCoordinateRegion, showsUserLocation: true, userTrackingMode: $userTrackingMode)
     }
 }
+
+// Previews of Map currently don't render, so this view's preview is omitted for now.

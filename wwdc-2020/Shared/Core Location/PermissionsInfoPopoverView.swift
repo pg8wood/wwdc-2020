@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct NewLocationPermissionsInfoView: View {
+struct PermissionsInfoPopoverView: View {
     @EnvironmentObject var userSettings: UserSettings
     
     @Binding var isPresented: Bool
@@ -64,15 +64,15 @@ Some CLLocationManager class methods have been deprecated.
 struct NewLocationPermissionsInfoView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-        NewLocationPermissionsInfoView(isPresented: .constant(true))
+        PermissionsInfoPopoverView(isPresented: .constant(true))
             .environment(\.horizontalSizeClass, .compact)
             .environment(\.verticalSizeClass, .compact)
             .previewLayout(.sizeThatFits)
             
-            NewLocationPermissionsInfoView(isPresented: .constant(true))
+            PermissionsInfoPopoverView(isPresented: .constant(true))
                 .previewDevice(PreviewDevice(rawValue: "iPhone X"))
             
-            NewLocationPermissionsInfoView(isPresented: .constant(true))
+            PermissionsInfoPopoverView(isPresented: .constant(true))
             .previewDevice(PreviewDevice(rawValue: "iPad Pro (12.9-inch) (4th generation)"))
         }
         .environmentObject(UserSettings())

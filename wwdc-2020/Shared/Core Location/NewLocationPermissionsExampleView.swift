@@ -31,7 +31,7 @@ struct NewLocationPermissionsExampleView<LocationManagerType: LocationManaging>:
             buttonActions()
         }
         .popover(isPresented: $isInfoSheetPresented) {
-            NewLocationPermissionsInfoView(isPresented: $isInfoSheetPresented)
+            PermissionsInfoPopoverView(isPresented: $isInfoSheetPresented)
                 .onDisappear {
                     isInfoSheetPresented = false
                 }
@@ -46,7 +46,7 @@ struct NewLocationPermissionsExampleView<LocationManagerType: LocationManaging>:
         ZStack(alignment: .top) {
             MapView<LocationManager>()
                 .environmentObject(locationManager)
-            LocationPermissionsView<LocationManager>()
+            LocationPermissionsStatusView<LocationManager>()
                 .environmentObject(locationManager)
         }
         .navigationTitle("MapKit")
