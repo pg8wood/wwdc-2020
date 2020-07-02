@@ -20,6 +20,7 @@ struct EasyExpandingDisclosureGroup<Content, Label>: View where Content: View,
     init(isExpanded: Binding<Bool>? = nil,
          @ViewBuilder content: @escaping () -> Content,
          @ViewBuilder label: @escaping () -> Label) {
+        self.isExpanded = isExpanded
         self.content = content
         self.label = label
     }
