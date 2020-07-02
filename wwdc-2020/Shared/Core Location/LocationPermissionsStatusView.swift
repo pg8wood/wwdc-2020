@@ -24,11 +24,11 @@ struct LocationPermissionsStatusView<LocationManagerType: LocationManaging>: Vie
                     .font(.caption)
             }
             
-            WWDCLink(title: "Change Location Settings", url: UIApplication.openSettingsURLString, image: "gear")
+//            WWDCLink(title: "Change Location Settings", url: UIApplication.openSettingsURLString, image: "gear")
         }
         .padding()
         .frame(minWidth: 0, maxWidth: .infinity)
-        .background(Color(UIColor.secondarySystemBackground))
+//        .background(Color(UIColor.secondarySystemBackground))
         .onAppear {
             locationManager.requestAuthorization(.whenInUse)
         }

@@ -22,9 +22,9 @@ Some CLLocationManager class methods have been deprecated.
         // Ideally we should use size classes and modalPresentationStyle here to
         // detect if we're presenting a popover on iPad vs. presenting overFullscreen
         // on an iPhone.
-        guard UIDevice.current.userInterfaceIdiom == .phone else {
-            return AnyView(EmptyView())
-        }
+//        guard UIDevice.current.userInterfaceIdiom == .phone else {
+//            return AnyView(EmptyView())
+//        }
         return AnyView(
             VStack(alignment: .trailing) {
                 Button {
@@ -65,8 +65,8 @@ struct NewLocationPermissionsInfoView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
         PermissionsInfoPopoverView(isPresented: .constant(true))
-            .environment(\.horizontalSizeClass, .compact)
-            .environment(\.verticalSizeClass, .compact)
+//            .environment(\.horizontalSizeClass, .compact)
+//            .environment(\.verticalSizeClass, .compact)
             .previewLayout(.sizeThatFits)
             
             PermissionsInfoPopoverView(isPresented: .constant(true))

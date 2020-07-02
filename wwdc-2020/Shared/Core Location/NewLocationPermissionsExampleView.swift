@@ -50,10 +50,10 @@ struct NewLocationPermissionsExampleView<LocationManagerType: LocationManaging>:
                 .environmentObject(locationManager)
         }
         .navigationTitle("MapKit")
-        .navigationBarItems(trailing: infoButton)
-        .navigationBarTitleDisplayMode(.inline)
-        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-        .edgesIgnoringSafeArea([.leading, .trailing, .bottom])
+//        .navigationBarItems(trailing: infoButton)
+//        .navigationBarTitleDisplayMode(.inline)
+//        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+//        .edgesIgnoringSafeArea([.leading, .trailing, .bottom])
     }
 }
 

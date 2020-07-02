@@ -3,10 +3,38 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B81DF3C624AE5D17000B1FAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B81DF3C524AE5D17000B1FAC /* Assets.xcassets */; };
+		B81DF3CD24AE5D17000B1FAC /* WWDC 2020 Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B81DF3CC24AE5D17000B1FAC /* WWDC 2020 Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B81DF3D424AE5D17000B1FAC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81DF3D324AE5D17000B1FAC /* ContentView.swift */; };
+		B81DF3D624AE5D17000B1FAC /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81DF3D524AE5D17000B1FAC /* NotificationController.swift */; };
+		B81DF3D824AE5D17000B1FAC /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81DF3D724AE5D17000B1FAC /* NotificationView.swift */; };
+		B81DF3DA24AE5D18000B1FAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B81DF3D924AE5D18000B1FAC /* Assets.xcassets */; };
+		B81DF3DD24AE5D18000B1FAC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B81DF3DC24AE5D18000B1FAC /* Preview Assets.xcassets */; };
+		B81DF3E224AE5D18000B1FAC /* WWDC 2020.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = B81DF3C324AE5D15000B1FAC /* WWDC 2020.app */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B81DF3EC24AE5E13000B1FAC /* wwdc_2020App.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81DF3D124AE5D17000B1FAC /* wwdc_2020App.swift */; };
+		B81DF3ED24AE5E53000B1FAC /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DB3FE724A95C2D00AC9B70 /* MapView.swift */; };
+		B81DF3EE24AE5E53000B1FAC /* VerticallyCenteredLabelImageAlignmentStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BCB15924A6F89000F994BD /* VerticallyCenteredLabelImageAlignmentStyle.swift */; };
+		B81DF3EF24AE5E53000B1FAC /* WWDCLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B4F2F724A6D435001AFC0E /* WWDCLink.swift */; };
+		B81DF3F024AE5E53000B1FAC /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DB3FCF24A7C18A00AC9B70 /* MainTabView.swift */; };
+		B81DF3F124AE5E53000B1FAC /* PermissionsInfoPopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DB3FF124A96DD300AC9B70 /* PermissionsInfoPopoverView.swift */; };
+		B81DF3F324AE5E53000B1FAC /* MockLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C85A1524AA59590040BA54 /* MockLocationManager.swift */; };
+		B81DF3F424AE5E53000B1FAC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DB3FD224A7C25200AC9B70 /* SettingsView.swift */; };
+		B81DF3F524AE5E53000B1FAC /* LocationManaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C85A1224AA593D0040BA54 /* LocationManaging.swift */; };
+		B81DF3F624AE5E53000B1FAC /* EasyExpandingDisclosureGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DB3FE324A80A7500AC9B70 /* EasyExpandingDisclosureGroup.swift */; };
+		B81DF3F724AE5E53000B1FAC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CE93CF24A666EA0028B27F /* HomeView.swift */; };
+		B81DF3F824AE5E53000B1FAC /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C85A0B24A98EE20040BA54 /* LocationManager.swift */; };
+		B81DF3F924AE5E53000B1FAC /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DB3FD524A7D1E300AC9B70 /* UserSettings.swift */; };
+		B81DF3FA24AE5E53000B1FAC /* ProgressViewExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81F177024ABD06D008018A7 /* ProgressViewExampleView.swift */; };
+		B81DF3FB24AE5E53000B1FAC /* LazyVGridExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B4F2F424A6CA9A001AFC0E /* LazyVGridExample.swift */; };
+		B81DF3FC24AE5E53000B1FAC /* LocationPermissionsStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C85A0E24AA51AF0040BA54 /* LocationPermissionsStatusView.swift */; };
+		B81DF3FD24AE5E53000B1FAC /* AccentColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DB3FDF24A7EC9700AC9B70 /* AccentColor.swift */; };
+		B81DF3FE24AE5E53000B1FAC /* HomeListStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CE93EF24A6694A0028B27F /* HomeListStore.swift */; };
+		B81DF3FF24AE5E53000B1FAC /* NewLocationPermissionsExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DB3FEE24A95FDB00AC9B70 /* NewLocationPermissionsExampleView.swift */; };
+		B81DF40024AE5E57000B1FAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8CE93D024A666ED0028B27F /* Assets.xcassets */; };
 		B81F177124ABD06D008018A7 /* ProgressViewExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81F177024ABD06D008018A7 /* ProgressViewExampleView.swift */; };
 		B81F177324ABDCB0008018A7 /* ProgressViewExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81F177024ABD06D008018A7 /* ProgressViewExampleView.swift */; };
 		B8B4F2F524A6CA9A001AFC0E /* LazyVGridExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B4F2F424A6CA9A001AFC0E /* LazyVGridExample.swift */; };
@@ -49,7 +77,62 @@
 		B8DB3FF324A96DD300AC9B70 /* PermissionsInfoPopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DB3FF124A96DD300AC9B70 /* PermissionsInfoPopoverView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B81DF3CE24AE5D17000B1FAC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B8CE93C924A666EA0028B27F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B81DF3CB24AE5D17000B1FAC;
+			remoteInfo = "WWDC 2020 Extension";
+		};
+		B81DF3E024AE5D18000B1FAC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B8CE93C924A666EA0028B27F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B81DF3C224AE5D15000B1FAC;
+			remoteInfo = "WWDC 2020";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B81DF3E624AE5D18000B1FAC /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B81DF3CD24AE5D17000B1FAC /* WWDC 2020 Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B81DF3EA24AE5D18000B1FAC /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				B81DF3E224AE5D18000B1FAC /* WWDC 2020.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		B81DF3C324AE5D15000B1FAC /* WWDC 2020.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WWDC 2020.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B81DF3C524AE5D17000B1FAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B81DF3C724AE5D17000B1FAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B81DF3CC24AE5D17000B1FAC /* WWDC 2020 Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WWDC 2020 Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B81DF3D124AE5D17000B1FAC /* wwdc_2020App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wwdc_2020App.swift; sourceTree = "<group>"; };
+		B81DF3D324AE5D17000B1FAC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B81DF3D524AE5D17000B1FAC /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		B81DF3D724AE5D17000B1FAC /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		B81DF3D924AE5D18000B1FAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B81DF3DC24AE5D18000B1FAC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B81DF3DE24AE5D18000B1FAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B81DF3DF24AE5D18000B1FAC /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		B81DF40124AE604D000B1FAC /* wwdc-2020.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "wwdc-2020.entitlements"; sourceTree = "<group>"; };
 		B81F177024ABD06D008018A7 /* ProgressViewExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewExampleView.swift; sourceTree = "<group>"; };
 		B8B4F2F424A6CA9A001AFC0E /* LazyVGridExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyVGridExample.swift; sourceTree = "<group>"; };
 		B8B4F2F724A6D435001AFC0E /* WWDCLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWDCLink.swift; sourceTree = "<group>"; };
@@ -78,6 +161,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B81DF3C924AE5D17000B1FAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B8CE93D224A666ED0028B27F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -95,6 +185,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B81DF3C424AE5D15000B1FAC /* watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				B81DF3C524AE5D17000B1FAC /* Assets.xcassets */,
+				B81DF3C724AE5D17000B1FAC /* Info.plist */,
+			);
+			path = watchOS;
+			sourceTree = "<group>";
+		};
+		B81DF3D024AE5D17000B1FAC /* watchOS Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B81DF3D124AE5D17000B1FAC /* wwdc_2020App.swift */,
+				B81DF3D324AE5D17000B1FAC /* ContentView.swift */,
+				B81DF3D524AE5D17000B1FAC /* NotificationController.swift */,
+				B81DF3D724AE5D17000B1FAC /* NotificationView.swift */,
+				B81DF3D924AE5D18000B1FAC /* Assets.xcassets */,
+				B81DF3DE24AE5D18000B1FAC /* Info.plist */,
+				B81DF3DF24AE5D18000B1FAC /* PushNotificationPayload.apns */,
+				B81DF3DB24AE5D18000B1FAC /* Preview Content */,
+			);
+			path = "watchOS Extension";
+			sourceTree = "<group>";
+		};
+		B81DF3DB24AE5D18000B1FAC /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				B81DF3DC24AE5D18000B1FAC /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		B8BCB15C24A6FA8A00F994BD /* SwiftUI Bugfixes */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +241,8 @@
 				B8CE93CD24A666EA0028B27F /* Shared */,
 				B8CE93D724A666ED0028B27F /* iOS */,
 				B8CE93DE24A666ED0028B27F /* macOS */,
+				B81DF3C424AE5D15000B1FAC /* watchOS */,
+				B81DF3D024AE5D17000B1FAC /* watchOS Extension */,
 				B8CE93D624A666ED0028B27F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -147,6 +271,8 @@
 			children = (
 				B8CE93D524A666ED0028B27F /* wwdc-2020.app */,
 				B8CE93DD24A666ED0028B27F /* wwdc-2020.app */,
+				B81DF3C324AE5D15000B1FAC /* WWDC 2020.app */,
+				B81DF3CC24AE5D17000B1FAC /* WWDC 2020 Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -154,6 +280,7 @@
 		B8CE93D724A666ED0028B27F /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				B81DF40124AE604D000B1FAC /* wwdc-2020.entitlements */,
 				B8CE93D824A666ED0028B27F /* Info.plist */,
 			);
 			path = iOS;
@@ -201,6 +328,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		B81DF3C224AE5D15000B1FAC /* WWDC 2020 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B81DF3E724AE5D18000B1FAC /* Build configuration list for PBXNativeTarget "WWDC 2020" */;
+			buildPhases = (
+				B81DF3C124AE5D15000B1FAC /* Resources */,
+				B81DF3E624AE5D18000B1FAC /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B81DF3CF24AE5D17000B1FAC /* PBXTargetDependency */,
+			);
+			name = "WWDC 2020";
+			productName = "WWDC 2020";
+			productReference = B81DF3C324AE5D15000B1FAC /* WWDC 2020.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		B81DF3CB24AE5D17000B1FAC /* WWDC 2020 Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B81DF3E324AE5D18000B1FAC /* Build configuration list for PBXNativeTarget "WWDC 2020 Extension" */;
+			buildPhases = (
+				B81DF3C824AE5D17000B1FAC /* Sources */,
+				B81DF3C924AE5D17000B1FAC /* Frameworks */,
+				B81DF3CA24AE5D17000B1FAC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WWDC 2020 Extension";
+			productName = "WWDC 2020 Extension";
+			productReference = B81DF3CC24AE5D17000B1FAC /* WWDC 2020 Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		B8CE93D424A666ED0028B27F /* iOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B8CE93E924A666ED0028B27F /* Build configuration list for PBXNativeTarget "iOS" */;
@@ -208,10 +369,12 @@
 				B8CE93D124A666ED0028B27F /* Sources */,
 				B8CE93D224A666ED0028B27F /* Frameworks */,
 				B8CE93D324A666ED0028B27F /* Resources */,
+				B81DF3EA24AE5D18000B1FAC /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B81DF3E124AE5D18000B1FAC /* PBXTargetDependency */,
 			);
 			name = iOS;
 			productName = iOS;
@@ -244,6 +407,12 @@
 				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
+					B81DF3C224AE5D15000B1FAC = {
+						CreatedOnToolsVersion = 12.0;
+					};
+					B81DF3CB24AE5D17000B1FAC = {
+						CreatedOnToolsVersion = 12.0;
+					};
 					B8CE93D424A666ED0028B27F = {
 						CreatedOnToolsVersion = 12.0;
 					};
@@ -267,11 +436,31 @@
 			targets = (
 				B8CE93D424A666ED0028B27F /* iOS */,
 				B8CE93DC24A666ED0028B27F /* macOS */,
+				B81DF3C224AE5D15000B1FAC /* WWDC 2020 */,
+				B81DF3CB24AE5D17000B1FAC /* WWDC 2020 Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B81DF3C124AE5D15000B1FAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B81DF3C624AE5D17000B1FAC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B81DF3CA24AE5D17000B1FAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B81DF3DD24AE5D18000B1FAC /* Preview Assets.xcassets in Resources */,
+				B81DF40024AE5E57000B1FAC /* Assets.xcassets in Resources */,
+				B81DF3DA24AE5D18000B1FAC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B8CE93D324A666ED0028B27F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -291,6 +480,35 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B81DF3C824AE5D17000B1FAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B81DF3EF24AE5E53000B1FAC /* WWDCLink.swift in Sources */,
+				B81DF3D624AE5D17000B1FAC /* NotificationController.swift in Sources */,
+				B81DF3EE24AE5E53000B1FAC /* VerticallyCenteredLabelImageAlignmentStyle.swift in Sources */,
+				B81DF3F724AE5E53000B1FAC /* HomeView.swift in Sources */,
+				B81DF3F824AE5E53000B1FAC /* LocationManager.swift in Sources */,
+				B81DF3FA24AE5E53000B1FAC /* ProgressViewExampleView.swift in Sources */,
+				B81DF3F024AE5E53000B1FAC /* MainTabView.swift in Sources */,
+				B81DF3FD24AE5E53000B1FAC /* AccentColor.swift in Sources */,
+				B81DF3F124AE5E53000B1FAC /* PermissionsInfoPopoverView.swift in Sources */,
+				B81DF3FE24AE5E53000B1FAC /* HomeListStore.swift in Sources */,
+				B81DF3F524AE5E53000B1FAC /* LocationManaging.swift in Sources */,
+				B81DF3FC24AE5E53000B1FAC /* LocationPermissionsStatusView.swift in Sources */,
+				B81DF3F624AE5E53000B1FAC /* EasyExpandingDisclosureGroup.swift in Sources */,
+				B81DF3D424AE5D17000B1FAC /* ContentView.swift in Sources */,
+				B81DF3ED24AE5E53000B1FAC /* MapView.swift in Sources */,
+				B81DF3D824AE5D17000B1FAC /* NotificationView.swift in Sources */,
+				B81DF3FB24AE5E53000B1FAC /* LazyVGridExample.swift in Sources */,
+				B81DF3F424AE5E53000B1FAC /* SettingsView.swift in Sources */,
+				B81DF3F324AE5E53000B1FAC /* MockLocationManager.swift in Sources */,
+				B81DF3FF24AE5E53000B1FAC /* NewLocationPermissionsExampleView.swift in Sources */,
+				B81DF3EC24AE5E13000B1FAC /* wwdc_2020App.swift in Sources */,
+				B81DF3F924AE5E53000B1FAC /* UserSettings.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B8CE93D124A666ED0028B27F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -345,7 +563,111 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		B81DF3CF24AE5D17000B1FAC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B81DF3CB24AE5D17000B1FAC /* WWDC 2020 Extension */;
+			targetProxy = B81DF3CE24AE5D17000B1FAC /* PBXContainerItemProxy */;
+		};
+		B81DF3E124AE5D18000B1FAC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = B81DF3C224AE5D15000B1FAC /* WWDC 2020 */;
+			targetProxy = B81DF3E024AE5D18000B1FAC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		B81DF3E424AE5D18000B1FAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"watchOS Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = GZZH6JZ9Q5;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "watchOS Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.patrickgatewood.wwdc-2020.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
+			};
+			name = Debug;
+		};
+		B81DF3E524AE5D18000B1FAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"watchOS Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = GZZH6JZ9Q5;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "watchOS Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.patrickgatewood.wwdc-2020.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
+			};
+			name = Release;
+		};
+		B81DF3E824AE5D18000B1FAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GZZH6JZ9Q5;
+				IBSC_MODULE = WWDC_2020_Extension;
+				INFOPLIST_FILE = watchOS/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.patrickgatewood.wwdc-2020.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
+			};
+			name = Debug;
+		};
+		B81DF3E924AE5D18000B1FAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GZZH6JZ9Q5;
+				IBSC_MODULE = WWDC_2020_Extension;
+				INFOPLIST_FILE = watchOS/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.patrickgatewood.wwdc-2020.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
+			};
+			name = Release;
+		};
 		B8CE93E724A666ED0028B27F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -462,6 +784,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "iOS/wwdc-2020.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GZZH6JZ9Q5;
 				ENABLE_PREVIEWS = YES;
@@ -474,6 +797,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.patrickgatewood.wwdc-2020";
 				PRODUCT_NAME = "wwdc-2020";
 				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -484,6 +808,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "iOS/wwdc-2020.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GZZH6JZ9Q5;
 				ENABLE_PREVIEWS = YES;
@@ -496,6 +821,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.patrickgatewood.wwdc-2020";
 				PRODUCT_NAME = "wwdc-2020";
 				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -553,6 +879,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B81DF3E324AE5D18000B1FAC /* Build configuration list for PBXNativeTarget "WWDC 2020 Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B81DF3E424AE5D18000B1FAC /* Debug */,
+				B81DF3E524AE5D18000B1FAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B81DF3E724AE5D18000B1FAC /* Build configuration list for PBXNativeTarget "WWDC 2020" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B81DF3E824AE5D18000B1FAC /* Debug */,
+				B81DF3E924AE5D18000B1FAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B8CE93CC24A666EA0028B27F /* Build configuration list for PBXProject "wwdc-2020" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

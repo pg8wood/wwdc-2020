@@ -48,7 +48,8 @@ class LocationManager: NSObject, LocationManaging, CLLocationManagerDelegate {
         case .always:
             locationManager.requestAlwaysAuthorization()
         case .whenInUse:
-            locationManager.requestWhenInUseAuthorization()
+            break
+//            locationManager.requestWhenInUseAuthorization()
         }
         
         locationManager.startUpdatingLocation()
