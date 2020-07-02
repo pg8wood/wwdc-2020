@@ -23,7 +23,8 @@ struct HomeView: View {
                 PersistenceDisclosureGroup()
                 ProgressViewsLink()
                 
-                NavigationLink(destination: NewLocationPermissionsExampleView()) {
+                NavigationLink(destination: NewLocationPermissionsExampleView<LocationManager>()
+                                .environmentObject(LocationManager())) {
                     Label("Core Location", systemImage: "mappin.circle")
                         .labelStyle(VerticallyCenteredLabelImageAlignmentStyle())
                 }

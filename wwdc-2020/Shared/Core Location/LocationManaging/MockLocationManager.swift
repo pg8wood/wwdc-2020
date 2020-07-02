@@ -20,8 +20,8 @@ class MockLocationManager: LocationManaging {
     var accuracyAuthorization: CLAccuracyAuthorization
     var userCoordinateRegion: MKCoordinateRegion
         
-    init(authorizationStatus: CLAuthorizationStatus,
-         accuracyAuthorization: CLAccuracyAuthorization,
+    init(authorizationStatus: CLAuthorizationStatus = .authorizedAlways,
+         accuracyAuthorization: CLAccuracyAuthorization = .fullAccuracy,
          userCoordinateRegion: MKCoordinateRegion = MockLocationManager.usaCoordinateRegion) {
         self.authorizationStatus = authorizationStatus
         self.accuracyAuthorization = accuracyAuthorization

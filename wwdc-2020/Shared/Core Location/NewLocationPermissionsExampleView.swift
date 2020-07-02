@@ -7,14 +7,12 @@
 
 import SwiftUI
 
-struct NewLocationPermissionsExampleView: View {
+struct NewLocationPermissionsExampleView<LocationManagerType: LocationManaging>: View {
     @EnvironmentObject var userSettings: UserSettings
+    @EnvironmentObject var locationManager: LocationManagerType
     
     @State private var isInfoSheetPresented = false
     @State private var locationType: LocationAuthorizationRequestType = .whenInUse
-    
-    // TODO locationmanaging
-    @ObservedObject var locationManager = LocationManager()
     
     var infoButton: some View {
         func buttonActions() {
@@ -62,8 +60,10 @@ struct NewLocationPermissionsExampleView: View {
 struct NewLocationPermissionsExampleView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            NewLocationPermissionsExampleView()
+            NewLocationPermissionsExampleView<MockLocationManager>()
                 .environmentObject(UserSettings())
+                .environmentObject(MockLocationManager(authorizationStatus: .denied, accuracyAuthorization: .fullAccuracy))
         }
+        .previewLayout(.sizeThatFits)
     }
 }
