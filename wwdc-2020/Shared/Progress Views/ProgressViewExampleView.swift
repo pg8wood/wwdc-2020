@@ -11,60 +11,11 @@
 import SwiftUI
 import Combine
 
-// MARK: - Type Erasure
-
-protocol TypeErasing {
-    var erasedValue: Any { get }
-}
-
-struct ProgressViewStyleTypeEraser<S: ProgressViewStyle>: TypeErasing {
-    let style: S
-    var erasedValue: Any {
-        style
-    }
-}
-
-// MARK: - Type-erased `ProgressViewStyle` attempt
-
-/// After some research, it seems this isn't possible yet without leveraging SwiftUI's internal implementations.
-/// See: https://forums.swift.org/t/why-some-swiftui-views-have-body-swift-never/27372/8
-struct AnyProgressViewStyle: ProgressViewStyle {
-    private var eraser: TypeErasing
-    
-    init<S>(_ style: S) where S : ProgressViewStyle {
-        eraser = ProgressViewStyleTypeEraser(style: style)
-    }
-    
-    private var wrappedStyle: Any {
-        eraser.erasedValue
-    }
-        
-    /// In AnyView, this type is Never, telling SwiftUI to internally call its wrapped subview's `body` instead.
-    typealias Body = AnyView
-    
-    func makeBody(configuration: Self.Configuration) -> Self.Body {
-        // See the AnyProgressViewStyle documentation for why we have to do this.
-        // Overall, this is not a pattern I'd recommend using moving forward.
-        if let style = wrappedStyle as? DefaultProgressViewStyle {
-            return AnyView(style.makeBody(configuration: configuration))
-        } else if let style = wrappedStyle as? CircularProgressViewStyle {
-            return AnyView(style.makeBody(configuration: configuration))
-        } else if let style = wrappedStyle as? LinearProgressViewStyle {
-            return AnyView(style.makeBody(configuration: configuration))
-        }
-
-        fatalError("Need to figure out to to restore the type of ProgressViewStyle!")
-    }
-}
-
-// MARK: - The example view which made me want to attempt to make my own type erasure
-
 struct ProgressViewExampleView: View {
     @State private var cancellables = Set<AnyCancellable>()
     @State private var downloadAmount = 0.0
     
-    // The offender. Since `ProgressViewStyle` has associated type constraints, we
-    // can't store a state variable of type `ProgressViewStyle`
+    /// Don't do this moving forward. See: [AnyProgressViewStyle](x-source-tag://AnyProgressViewStyle) for more info
     @State private var currentProgressViewStyle: ProgressStyle = .default
     
     enum ProgressStyle: String, CaseIterable {
@@ -102,6 +53,12 @@ struct ProgressViewExampleView: View {
             ProgressView("Downloading…", value: downloadAmount, total: 100)
                 .progressViewStyle(currentProgressViewStyle.body)
                 .frame(minWidth: 0, maxWidth: .infinity)
+                .padding(.bottom, 30)
+                        
+            Text("Custom Progress View")
+                .font(.headline)
+                .padding(.bottom, 30)
+            LoadingMessageProgressView()
             
             Spacer()
         }

@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		B81F177124ABD06D008018A7 /* ProgressViewExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81F177024ABD06D008018A7 /* ProgressViewExampleView.swift */; };
 		B81F177324ABDCB0008018A7 /* ProgressViewExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81F177024ABD06D008018A7 /* ProgressViewExampleView.swift */; };
+		B8798C2524AFC79500B14253 /* LoadingMessageProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8798C2424AFC79500B14253 /* LoadingMessageProgressView.swift */; };
+		B8798C2624AFC79500B14253 /* LoadingMessageProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8798C2424AFC79500B14253 /* LoadingMessageProgressView.swift */; };
+		B8798C2924AFCDD000B14253 /* BadAnyProgressViewTypeErasure.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8798C2824AFCDD000B14253 /* BadAnyProgressViewTypeErasure.swift */; };
+		B8798C2A24AFCDD000B14253 /* BadAnyProgressViewTypeErasure.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8798C2824AFCDD000B14253 /* BadAnyProgressViewTypeErasure.swift */; };
 		B8B4F2F524A6CA9A001AFC0E /* LazyVGridExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B4F2F424A6CA9A001AFC0E /* LazyVGridExample.swift */; };
 		B8B4F2F624A6CA9A001AFC0E /* LazyVGridExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B4F2F424A6CA9A001AFC0E /* LazyVGridExample.swift */; };
 		B8B4F2F824A6D435001AFC0E /* WWDCLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B4F2F724A6D435001AFC0E /* WWDCLink.swift */; };
@@ -51,6 +55,8 @@
 
 /* Begin PBXFileReference section */
 		B81F177024ABD06D008018A7 /* ProgressViewExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewExampleView.swift; sourceTree = "<group>"; };
+		B8798C2424AFC79500B14253 /* LoadingMessageProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingMessageProgressView.swift; sourceTree = "<group>"; };
+		B8798C2824AFCDD000B14253 /* BadAnyProgressViewTypeErasure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadAnyProgressViewTypeErasure.swift; sourceTree = "<group>"; };
 		B8B4F2F424A6CA9A001AFC0E /* LazyVGridExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyVGridExample.swift; sourceTree = "<group>"; };
 		B8B4F2F724A6D435001AFC0E /* WWDCLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWDCLink.swift; sourceTree = "<group>"; };
 		B8BCB15924A6F89000F994BD /* VerticallyCenteredLabelImageAlignmentStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticallyCenteredLabelImageAlignmentStyle.swift; sourceTree = "<group>"; };
@@ -95,6 +101,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B8798C2724AFCD6600B14253 /* Progress Views */ = {
+			isa = PBXGroup;
+			children = (
+				B81F177024ABD06D008018A7 /* ProgressViewExampleView.swift */,
+				B8798C2824AFCDD000B14253 /* BadAnyProgressViewTypeErasure.swift */,
+				B8798C2424AFC79500B14253 /* LoadingMessageProgressView.swift */,
+			);
+			path = "Progress Views";
+			sourceTree = "<group>";
+		};
 		B8BCB15C24A6FA8A00F994BD /* SwiftUI Bugfixes */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,11 +145,11 @@
 				B8CE93CE24A666EA0028B27F /* wwdc_2020App.swift */,
 				B8DB3FCF24A7C18A00AC9B70 /* MainTabView.swift */,
 				B8CE93CF24A666EA0028B27F /* HomeView.swift */,
-				B81F177024ABD06D008018A7 /* ProgressViewExampleView.swift */,
 				B8CE93EF24A6694A0028B27F /* HomeListStore.swift */,
 				B8B4F2F424A6CA9A001AFC0E /* LazyVGridExample.swift */,
 				B8B4F2F724A6D435001AFC0E /* WWDCLink.swift */,
 				B8DB3FE624A8112500AC9B70 /* Common Views */,
+				B8798C2724AFCD6600B14253 /* Progress Views */,
 				B8DB3FEA24A95FA300AC9B70 /* Core Location */,
 				B8DB3FE224A7ECA300AC9B70 /* Settings */,
 				B8BCB15C24A6FA8A00F994BD /* SwiftUI Bugfixes */,
@@ -300,6 +316,7 @@
 				B8C85A0C24A98EE20040BA54 /* LocationManager.swift in Sources */,
 				B8DB3FE024A7EC9700AC9B70 /* AccentColor.swift in Sources */,
 				B8DB3FD324A7C25200AC9B70 /* SettingsView.swift in Sources */,
+				B8798C2524AFC79500B14253 /* LoadingMessageProgressView.swift in Sources */,
 				B8B4F2F524A6CA9A001AFC0E /* LazyVGridExample.swift in Sources */,
 				B8C85A1324AA593D0040BA54 /* LocationManaging.swift in Sources */,
 				B8DB3FD024A7C18A00AC9B70 /* MainTabView.swift in Sources */,
@@ -308,6 +325,7 @@
 				B8DB3FF224A96DD300AC9B70 /* PermissionsInfoPopoverView.swift in Sources */,
 				B8CE93E124A666ED0028B27F /* wwdc_2020App.swift in Sources */,
 				B8B4F2F824A6D435001AFC0E /* WWDCLink.swift in Sources */,
+				B8798C2924AFCDD000B14253 /* BadAnyProgressViewTypeErasure.swift in Sources */,
 				B81F177124ABD06D008018A7 /* ProgressViewExampleView.swift in Sources */,
 				B8DB3FEF24A95FDB00AC9B70 /* NewLocationPermissionsExampleView.swift in Sources */,
 				B8C85A1624AA59590040BA54 /* MockLocationManager.swift in Sources */,
@@ -326,6 +344,7 @@
 				B8C85A0D24A98EE20040BA54 /* LocationManager.swift in Sources */,
 				B8DB3FE124A7EC9700AC9B70 /* AccentColor.swift in Sources */,
 				B8DB3FD424A7C25200AC9B70 /* SettingsView.swift in Sources */,
+				B8798C2624AFC79500B14253 /* LoadingMessageProgressView.swift in Sources */,
 				B8B4F2F624A6CA9A001AFC0E /* LazyVGridExample.swift in Sources */,
 				B8C85A1424AA593D0040BA54 /* LocationManaging.swift in Sources */,
 				B8DB3FD124A7C18A00AC9B70 /* MainTabView.swift in Sources */,
@@ -334,6 +353,7 @@
 				B8DB3FF324A96DD300AC9B70 /* PermissionsInfoPopoverView.swift in Sources */,
 				B8CE93E224A666ED0028B27F /* wwdc_2020App.swift in Sources */,
 				B8B4F2F924A6D435001AFC0E /* WWDCLink.swift in Sources */,
+				B8798C2A24AFCDD000B14253 /* BadAnyProgressViewTypeErasure.swift in Sources */,
 				B81F177324ABDCB0008018A7 /* ProgressViewExampleView.swift in Sources */,
 				B8DB3FF024A95FDB00AC9B70 /* NewLocationPermissionsExampleView.swift in Sources */,
 				B8C85A1724AA59590040BA54 /* MockLocationManager.swift in Sources */,
