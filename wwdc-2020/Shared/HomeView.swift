@@ -13,10 +13,12 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             List {
-                WWDCLink(title: "App Essentials in SwiftUI", url: "https://developer.apple.com/wwdc20/10037")
-                
                 ForEach(store.exampleModels) { exampleModel in
                     Text(exampleModel.title)
+                }
+                HStack {
+                    Text("Start here:")
+                    WWDCLink(title: "App Essentials in SwiftUI", url: "https://developer.apple.com/wwdc20/10037")
                 }
                                 
                 StackDisclosureGroup()

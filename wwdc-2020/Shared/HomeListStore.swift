@@ -9,8 +9,7 @@ import Foundation
 
 class HomeListStore: ObservableObject {
     var exampleModels = [
-        SimpleExampleModel(title: "Hello world!"),
-        SimpleExampleModel(title: "There's so much to learn at WWDC 😁")
+        SimpleExampleModel(title: "There's so much to learn at WWDC 👨‍💻")
     ]
 }
 
