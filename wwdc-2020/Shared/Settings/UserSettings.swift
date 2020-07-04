@@ -13,6 +13,8 @@ class UserSettings: ObservableObject {
     private var disposables = Set<AnyCancellable>()
     private var autoChangeColorTimer: AnyCancellable?
     
+    // TODO: changing an @AppStorage doesn't send its change automatically. Maybe this is a bug in the 1st beta?
+    
     @AppStorage("accentColor") var accentColorString = "blue" {
         willSet {
             objectWillChange.send()

@@ -54,7 +54,7 @@ struct AutoColorUpdateSettingsView: View {
     var body: some View {
         Group {
             Toggle(isOn: $userSettings.autoUpdateAccentColor) {
-                Text("Change colors automatically")
+                Text("Christmas mode")
             }
             
             if userSettings.autoUpdateAccentColor {

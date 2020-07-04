@@ -50,10 +50,8 @@ struct PersistenceDisclosureGroup: View {
     var body: some View {
         EasyExpandingDisclosureGroup {
             NavigationLink(destination: SettingsView()) {
-                Text("@AppStorage and Combine")
+                Text("@AppStorage")
             }
-            
-            Text("Core Data - TODO")
         } label: {
             Label("Persistence", systemImage: "externaldrive")
                 .labelStyle(VerticallyCenteredLabelImageAlignmentStyle())
