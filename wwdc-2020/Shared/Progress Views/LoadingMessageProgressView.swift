@@ -12,23 +12,6 @@ struct LoadingMessageProgressView: View {
     @State private var cancellables = Set<AnyCancellable>()
     @State private var messageIndex = 0
     
-    private var messages = [
-        "Loading...",
-        "Is anybody there?",
-        "I'm so lonely"
-    ]
-    
-    private var imageNames = [
-        "kermit-thinking",
-        "kermit-fishing",
-        "kermit-rain"
-    ]
-    
-    private var currentMessage: String {
-        messages[messageIndex % messages.count]
-    }
-    
-    
     private var loadingMessages: [AnyView] = {
         func loadingImage(_ name: String) -> some View {
             Image(name)
@@ -46,7 +29,7 @@ struct LoadingMessageProgressView: View {
         return [
             loadingText("Loading..."),
             loadingText("Is anybody there?"),
-            loadingText("I'm some lonely"),
+            loadingText("I'm so lonely"),
             loadingImage("kermit-thinking"),
             loadingImage("kermit-fishing"),
             loadingImage("kermit-rain")
@@ -63,7 +46,7 @@ struct LoadingMessageProgressView: View {
         ProgressView {
             currentLoadingMessage
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .top)
-                .id("LoadingMessageViewText: \(currentMessage)") // will tell SwiftUI to use the transition even if the view is changing to a view of the same type (i.e. Image --> Image)
+                .id("LoadingMessageViewText: \(messageIndex)") // will tell SwiftUI to use the transition even if the view is changing to a view of the same type (i.e. Image --> Image)
                 .transition(.slide)
                 .animation(.default)
         }
