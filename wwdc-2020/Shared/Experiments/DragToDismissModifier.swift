@@ -38,6 +38,20 @@ struct DragToDismiss: ViewModifier {
         return 2 - Double(offset.width / 75)
     }
     
+    var dragToDismissGesture: some Gesture {
+        DragGesture()
+            .onChanged { gesture in
+                self.offset = gesture.translation
+            }
+            .onEnded { _ in
+                if offset.width > 50 {
+                    presentationMode.wrappedValue.dismiss()
+                } else {
+                    offset = .zero
+                }
+            }
+    }
+    
     func body(content: Content) -> some View {
         ZStack {
             content
@@ -46,18 +60,6 @@ struct DragToDismiss: ViewModifier {
         .contentShape(Rectangle())
         .offset(x: appliedViewOffset, y: 0)
         .opacity(opacity)
-        .gesture(
-            DragGesture()
-                .onChanged { gesture in
-                    self.offset = gesture.translation
-                }
-                .onEnded { _ in
-                    if offset.width > 50 {
-                        presentationMode.wrappedValue.dismiss()
-                    } else {
-                        offset = .zero
-                    }
-                }
-        )
+        .gesture(dragToDismissGesture)
     }
 }
