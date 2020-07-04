@@ -13,10 +13,14 @@
 		B8798C2624AFC79500B14253 /* LoadingMessageProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8798C2424AFC79500B14253 /* LoadingMessageProgressView.swift */; };
 		B8798C2924AFCDD000B14253 /* BadAnyProgressViewTypeErasure.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8798C2824AFCDD000B14253 /* BadAnyProgressViewTypeErasure.swift */; };
 		B8798C2A24AFCDD000B14253 /* BadAnyProgressViewTypeErasure.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8798C2824AFCDD000B14253 /* BadAnyProgressViewTypeErasure.swift */; };
+		B8798C2F24B0D9B300B14253 /* DragToDisissExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8798C2E24B0D9B300B14253 /* DragToDisissExampleView.swift */; };
+		B8798C3024B0D9B300B14253 /* DragToDisissExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8798C2E24B0D9B300B14253 /* DragToDisissExampleView.swift */; };
 		B8B4F2F524A6CA9A001AFC0E /* LazyVGridExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B4F2F424A6CA9A001AFC0E /* LazyVGridExample.swift */; };
 		B8B4F2F624A6CA9A001AFC0E /* LazyVGridExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B4F2F424A6CA9A001AFC0E /* LazyVGridExample.swift */; };
 		B8B4F2F824A6D435001AFC0E /* WWDCLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B4F2F724A6D435001AFC0E /* WWDCLink.swift */; };
 		B8B4F2F924A6D435001AFC0E /* WWDCLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B4F2F724A6D435001AFC0E /* WWDCLink.swift */; };
+		B8BB104724B0F5FB00C34CFA /* DragToDismissModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BB104624B0F5FB00C34CFA /* DragToDismissModifier.swift */; };
+		B8BB104824B0F5FB00C34CFA /* DragToDismissModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BB104624B0F5FB00C34CFA /* DragToDismissModifier.swift */; };
 		B8BCB15A24A6F89000F994BD /* VerticallyCenteredLabelImageAlignmentStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BCB15924A6F89000F994BD /* VerticallyCenteredLabelImageAlignmentStyle.swift */; };
 		B8BCB15B24A6F89000F994BD /* VerticallyCenteredLabelImageAlignmentStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BCB15924A6F89000F994BD /* VerticallyCenteredLabelImageAlignmentStyle.swift */; };
 		B8C85A0C24A98EE20040BA54 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C85A0B24A98EE20040BA54 /* LocationManager.swift */; };
@@ -57,8 +61,10 @@
 		B81F177024ABD06D008018A7 /* ProgressViewExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewExampleView.swift; sourceTree = "<group>"; };
 		B8798C2424AFC79500B14253 /* LoadingMessageProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingMessageProgressView.swift; sourceTree = "<group>"; };
 		B8798C2824AFCDD000B14253 /* BadAnyProgressViewTypeErasure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadAnyProgressViewTypeErasure.swift; sourceTree = "<group>"; };
+		B8798C2E24B0D9B300B14253 /* DragToDisissExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragToDisissExampleView.swift; sourceTree = "<group>"; };
 		B8B4F2F424A6CA9A001AFC0E /* LazyVGridExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyVGridExample.swift; sourceTree = "<group>"; };
 		B8B4F2F724A6D435001AFC0E /* WWDCLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWDCLink.swift; sourceTree = "<group>"; };
+		B8BB104624B0F5FB00C34CFA /* DragToDismissModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragToDismissModifier.swift; sourceTree = "<group>"; };
 		B8BCB15924A6F89000F994BD /* VerticallyCenteredLabelImageAlignmentStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticallyCenteredLabelImageAlignmentStyle.swift; sourceTree = "<group>"; };
 		B8C85A0B24A98EE20040BA54 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		B8C85A0E24AA51AF0040BA54 /* LocationPermissionsStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPermissionsStatusView.swift; sourceTree = "<group>"; };
@@ -111,6 +117,15 @@
 			path = "Progress Views";
 			sourceTree = "<group>";
 		};
+		B8BB104524B0F21700C34CFA /* Experiments */ = {
+			isa = PBXGroup;
+			children = (
+				B8798C2E24B0D9B300B14253 /* DragToDisissExampleView.swift */,
+				B8BB104624B0F5FB00C34CFA /* DragToDismissModifier.swift */,
+			);
+			path = Experiments;
+			sourceTree = "<group>";
+		};
 		B8BCB15C24A6FA8A00F994BD /* SwiftUI Bugfixes */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +168,7 @@
 				B8DB3FEA24A95FA300AC9B70 /* Core Location */,
 				B8DB3FE224A7ECA300AC9B70 /* Settings */,
 				B8BCB15C24A6FA8A00F994BD /* SwiftUI Bugfixes */,
+				B8BB104524B0F21700C34CFA /* Experiments */,
 				B8CE93D024A666ED0028B27F /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -320,9 +336,11 @@
 				B8B4F2F524A6CA9A001AFC0E /* LazyVGridExample.swift in Sources */,
 				B8C85A1324AA593D0040BA54 /* LocationManaging.swift in Sources */,
 				B8DB3FD024A7C18A00AC9B70 /* MainTabView.swift in Sources */,
+				B8BB104724B0F5FB00C34CFA /* DragToDismissModifier.swift in Sources */,
 				B8CE93F024A6694A0028B27F /* HomeListStore.swift in Sources */,
 				B8C85A0F24AA51AF0040BA54 /* LocationPermissionsStatusView.swift in Sources */,
 				B8DB3FF224A96DD300AC9B70 /* PermissionsInfoPopoverView.swift in Sources */,
+				B8798C2F24B0D9B300B14253 /* DragToDisissExampleView.swift in Sources */,
 				B8CE93E124A666ED0028B27F /* wwdc_2020App.swift in Sources */,
 				B8B4F2F824A6D435001AFC0E /* WWDCLink.swift in Sources */,
 				B8798C2924AFCDD000B14253 /* BadAnyProgressViewTypeErasure.swift in Sources */,
@@ -348,9 +366,11 @@
 				B8B4F2F624A6CA9A001AFC0E /* LazyVGridExample.swift in Sources */,
 				B8C85A1424AA593D0040BA54 /* LocationManaging.swift in Sources */,
 				B8DB3FD124A7C18A00AC9B70 /* MainTabView.swift in Sources */,
+				B8BB104824B0F5FB00C34CFA /* DragToDismissModifier.swift in Sources */,
 				B8CE93F124A6694A0028B27F /* HomeListStore.swift in Sources */,
 				B8C85A1024AA51B00040BA54 /* LocationPermissionsStatusView.swift in Sources */,
 				B8DB3FF324A96DD300AC9B70 /* PermissionsInfoPopoverView.swift in Sources */,
+				B8798C3024B0D9B300B14253 /* DragToDisissExampleView.swift in Sources */,
 				B8CE93E224A666ED0028B27F /* wwdc_2020App.swift in Sources */,
 				B8B4F2F924A6D435001AFC0E /* WWDCLink.swift in Sources */,
 				B8798C2A24AFCDD000B14253 /* BadAnyProgressViewTypeErasure.swift in Sources */,

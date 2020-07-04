@@ -22,12 +22,8 @@ struct HomeView: View {
                 StackDisclosureGroup()
                 PersistenceDisclosureGroup()
                 ProgressViewsLink()
-                
-                NavigationLink(destination: NewLocationPermissionsExampleView<LocationManager>()
-                                .environmentObject(LocationManager())) {
-                    Label("Core Location", systemImage: "mappin.circle")
-                        .labelStyle(VerticallyCenteredLabelImageAlignmentStyle())
-                }
+                CoreLocationLink()
+                ExperimentsDisclosureGroup()
             }
             .navigationTitle("WWDC 2020")
             
@@ -76,6 +72,29 @@ struct ProgressViewsLink: View {
                 ProgressView()
                     .padding(.leading, -8)
             }
+        }
+    }
+}
+
+struct CoreLocationLink: View {
+    var body: some View {
+        NavigationLink(destination: NewLocationPermissionsExampleView<LocationManager>()
+                        .environmentObject(LocationManager())) {
+            Label("Core Location", systemImage: "mappin.circle")
+                .labelStyle(VerticallyCenteredLabelImageAlignmentStyle())
+        }
+    }
+}
+
+struct ExperimentsDisclosureGroup: View {
+    var body: some View {
+        EasyExpandingDisclosureGroup {
+            NavigationLink(destination: DragToDisissExampleView()) {
+                Text("Drag to pop view example")
+            }
+        } label: {
+            Label("Experiments", systemImage: "eyes")
+                .labelStyle(VerticallyCenteredLabelImageAlignmentStyle())
         }
     }
 }
