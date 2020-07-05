@@ -7,13 +7,11 @@
 
 import SwiftUI
 
-struct DragToDisissExampleView: View {
-    @State private var offset = CGSize.zero
-        
+struct DragToDisissExampleView: View {        
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             Text("Drag right from anywhere to dismiss this view.")
-            Text("Note: this currently isn't an interactive transition. Interactive transitions with NavigationView look very difficult in SwiftUI right now. I'll keep playing with it though 🤞")
+            Text("Note: this currently isn't an interactive transition. Interactive transitions with NavigationView look very difficult in SwiftUI right now.")
                 .font(.caption)
             Spacer()
         }

@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+/// Notably this view currently only supports the equivalent of StackNavigationViewStyle since
+/// the implementation details behind `NavigationView` forming primary-detail split view controllers
+/// are probably a bit more complex that I'd like to delve into for now.
 struct SwipeToPopNavigationView<Content>: UIViewControllerRepresentable where Content: View {
     private let content: () -> Content
     
@@ -16,6 +19,8 @@ struct SwipeToPopNavigationView<Content>: UIViewControllerRepresentable where Co
 
     func makeUIViewController(context: Context) -> UINavigationController {
         let hostingController = UIHostingController(rootView: content())
+        hostingController.view.insetsLayoutMarginsFromSafeArea = false
+        
         return SwipeToPopNavigationController(rootViewController: hostingController)
     }
     
@@ -29,7 +34,7 @@ struct SwipeToPopNavigationView<Content>: UIViewControllerRepresentable where Co
 private class SwipeToPopNavigationController: UINavigationController, UIGestureRecognizerDelegate {
     
     private lazy var fullWidthBackGestureRecognizer = UIPanGestureRecognizer()
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationBar.prefersLargeTitles = true

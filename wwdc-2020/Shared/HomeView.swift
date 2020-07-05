@@ -87,10 +87,21 @@ struct CoreLocationLink: View {
 }
 
 struct ExperimentsDisclosureGroup: View {
+    @State private var isShowingSwipeToPopSheet = false
+    
     var body: some View {
         EasyExpandingDisclosureGroup {
             NavigationLink(destination: DragToDisissExampleView()) {
-                Text("Drag to pop view example")
+                Text("Swipe to pop NavigationView (pure SwiftUI)")
+            }
+            
+            Button {
+                isShowingSwipeToPopSheet = true
+            } label: {
+                Text("Swipe to pop NavigationView (with UIKit)")
+            }
+            .sheet(isPresented: $isShowingSwipeToPopSheet) {
+                SwipeToPopExampleView()
             }
         } label: {
             Label("Experiments", systemImage: "eyes")
