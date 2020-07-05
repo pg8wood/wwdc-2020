@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,6 +21,8 @@
 		B8B4F2F924A6D435001AFC0E /* WWDCLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B4F2F724A6D435001AFC0E /* WWDCLink.swift */; };
 		B8BB104724B0F5FB00C34CFA /* DragToDismissModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BB104624B0F5FB00C34CFA /* DragToDismissModifier.swift */; };
 		B8BB104824B0F5FB00C34CFA /* DragToDismissModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BB104624B0F5FB00C34CFA /* DragToDismissModifier.swift */; };
+		B8BB104D24B22F7500C34CFA /* SwipeToPopNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BB104C24B22F7500C34CFA /* SwipeToPopNavigationView.swift */; };
+		B8BB104E24B22F7500C34CFA /* SwipeToPopNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BB104C24B22F7500C34CFA /* SwipeToPopNavigationView.swift */; };
 		B8BCB15A24A6F89000F994BD /* VerticallyCenteredLabelImageAlignmentStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BCB15924A6F89000F994BD /* VerticallyCenteredLabelImageAlignmentStyle.swift */; };
 		B8BCB15B24A6F89000F994BD /* VerticallyCenteredLabelImageAlignmentStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BCB15924A6F89000F994BD /* VerticallyCenteredLabelImageAlignmentStyle.swift */; };
 		B8C85A0C24A98EE20040BA54 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C85A0B24A98EE20040BA54 /* LocationManager.swift */; };
@@ -65,6 +67,7 @@
 		B8B4F2F424A6CA9A001AFC0E /* LazyVGridExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyVGridExample.swift; sourceTree = "<group>"; };
 		B8B4F2F724A6D435001AFC0E /* WWDCLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWDCLink.swift; sourceTree = "<group>"; };
 		B8BB104624B0F5FB00C34CFA /* DragToDismissModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragToDismissModifier.swift; sourceTree = "<group>"; };
+		B8BB104C24B22F7500C34CFA /* SwipeToPopNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeToPopNavigationView.swift; sourceTree = "<group>"; };
 		B8BCB15924A6F89000F994BD /* VerticallyCenteredLabelImageAlignmentStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticallyCenteredLabelImageAlignmentStyle.swift; sourceTree = "<group>"; };
 		B8C85A0B24A98EE20040BA54 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		B8C85A0E24AA51AF0040BA54 /* LocationPermissionsStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPermissionsStatusView.swift; sourceTree = "<group>"; };
@@ -214,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				B8DB3FE324A80A7500AC9B70 /* EasyExpandingDisclosureGroup.swift */,
+				B8BB104C24B22F7500C34CFA /* SwipeToPopNavigationView.swift */,
 			);
 			path = "Common Views";
 			sourceTree = "<group>";
@@ -341,6 +345,7 @@
 				B8C85A0F24AA51AF0040BA54 /* LocationPermissionsStatusView.swift in Sources */,
 				B8DB3FF224A96DD300AC9B70 /* PermissionsInfoPopoverView.swift in Sources */,
 				B8798C2F24B0D9B300B14253 /* DragToDisissExampleView.swift in Sources */,
+				B8BB104D24B22F7500C34CFA /* SwipeToPopNavigationView.swift in Sources */,
 				B8CE93E124A666ED0028B27F /* wwdc_2020App.swift in Sources */,
 				B8B4F2F824A6D435001AFC0E /* WWDCLink.swift in Sources */,
 				B8798C2924AFCDD000B14253 /* BadAnyProgressViewTypeErasure.swift in Sources */,
@@ -371,6 +376,7 @@
 				B8C85A1024AA51B00040BA54 /* LocationPermissionsStatusView.swift in Sources */,
 				B8DB3FF324A96DD300AC9B70 /* PermissionsInfoPopoverView.swift in Sources */,
 				B8798C3024B0D9B300B14253 /* DragToDisissExampleView.swift in Sources */,
+				B8BB104E24B22F7500C34CFA /* SwipeToPopNavigationView.swift in Sources */,
 				B8CE93E224A666ED0028B27F /* wwdc_2020App.swift in Sources */,
 				B8B4F2F924A6D435001AFC0E /* WWDCLink.swift in Sources */,
 				B8798C2A24AFCDD000B14253 /* BadAnyProgressViewTypeErasure.swift in Sources */,
