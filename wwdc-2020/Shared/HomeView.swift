@@ -64,14 +64,13 @@ struct PersistenceDisclosureGroup: View {
 struct ProgressViewsLink: View {
     var body: some View {
         NavigationLink(destination: ProgressViewExampleView()) {
-            // The padding applied to both items is to fix what I'm assuming is just a bug in the 1st iOS 14.0 beta
             Label {
                 Text("Progress Views")
-                    .padding(.leading, -10)
+                    .padding(.leading, 8)
             } icon: {
                 ProgressView()
-                    .padding(.leading, -8)
             }
+            .labelStyle(VerticallyCenteredLabelImageAlignmentStyle())
         }
     }
 }
@@ -80,7 +79,7 @@ struct CoreLocationLink: View {
     var body: some View {
         NavigationLink(destination: NewLocationPermissionsExampleView<LocationManager>()
                         .environmentObject(LocationManager())) {
-            Label("Core Location", systemImage: "mappin.circle")
+            Label("Core Location Changes", systemImage: "mappin.circle")
                 .labelStyle(VerticallyCenteredLabelImageAlignmentStyle())
         }
     }
