@@ -68,7 +68,7 @@ class LocationManager: NSObject, LocationManaging, CLLocationManagerDelegate {
      // MARK: - CLLocationManagerDelegate
     
      func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
-        self.authorizationStatus = manager.authorizationStatus()
+        self.authorizationStatus = manager.authorizationStatus
         self.accuracyAuthorization = manager.accuracyAuthorization
     }
         
